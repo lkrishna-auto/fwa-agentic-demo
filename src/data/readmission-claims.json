@@ -1,0 +1,1756 @@
+[
+  {
+    "id": "RA-001",
+    "indexClaimId": "IDX-001",
+    "indexProviderId": "PRV-001",
+    "indexProviderName": "General Hospital",
+    "indexBeneficiaryId": "BEN-1001",
+    "indexBeneficiaryName": "Margaret Johnson",
+    "indexAdmissionDate": "2025-12-10",
+    "indexDischargeDate": "2025-12-17",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 7,
+    "indexAttendingPhysicianName": "Dr. Sarah Chen",
+    "indexAttendingSpecialty": "Internal Medicine",
+    "indexDRG": "291",
+    "indexDRGDescription": "Heart Failure & Shock w MCC",
+    "indexBilledAmount": 14100,
+    "indexPrimaryDiagnosis": {
+      "code": "I50.33",
+      "description": "Acute on chronic diastolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N18.3",
+        "description": "Chronic kidney disease, stage 3",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "indexClinicalNotes": "78-year-old female admitted with acute decompensated CHF. BNP 2840, required IV furosemide and BiPAP. Responded to diuresis over 5 days. EF 30%. Weight decreased 8 lbs. Discharged on lisinopril, carvedilol, furosemide 40mg BID, spironolactone. Follow-up in 7 days with cardiology.",
+    "indexDischargePlan": "Discharge to home with VNA services. Daily weights. Low-sodium diet education. Cardiology follow-up in 7 days. Return to ED if weight gain >3 lbs, worsening dyspnea, or chest pain.",
+    "readmitClaimId": "RDM-001",
+    "readmitProviderId": "PRV-001",
+    "readmitProviderName": "General Hospital",
+    "readmitAdmissionDate": "2025-12-25",
+    "readmitDischargeDate": "2025-12-30",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 5,
+    "readmitAttendingPhysicianName": "Dr. Sarah Chen",
+    "readmitAttendingSpecialty": "Internal Medicine",
+    "readmitDRG": "292",
+    "readmitDRGDescription": "Heart Failure & Shock w CC",
+    "readmitBilledAmount": 6860,
+    "readmitPrimaryDiagnosis": {
+      "code": "I50.33",
+      "description": "Acute on chronic diastolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "N18.3",
+        "description": "Chronic kidney disease, stage 3",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "E87.1",
+        "description": "Hypo-osmolality and hyponatremia",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "readmitClinicalNotes": "78-year-old female readmitted 8 days after discharge for recurrent CHF exacerbation. Patient reports dietary noncompliance over holidays, gained 6 lbs. BNP 1920. Restarted IV diuresis. Did not follow up with cardiology as scheduled. Medication reconciliation shows patient ran out of furosemide 3 days prior to readmission.",
+    "daysBetween": 8,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 20960,
+    "hrrpTargetCondition": "CHF",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Potentially Preventable",
+    "riskScore": 48,
+    "clinicalRelatedness": "Likely Related",
+    "preventabilityScore": 55,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-001",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission has the same principal diagnosis category as the index admission (I50.33 -> I50.33: Acute on chronic diastolic heart failure). This strongly suggests the readmission is clinically related to the index stay and may represent incomplete treatment or disease recurrence.",
+        "recommendation": "Review index discharge to assess whether treatment was adequate. Evaluate if the readmission could have been prevented with more aggressive treatment, closer follow-up, or extended index stay.",
+        "financialImpact": -6860
+      },
+      {
+        "ruleId": "RULE-RA-DA-003",
+        "category": "DISCHARGE_ADEQUACY",
+        "severity": "Medium",
+        "description": "Readmission notes indicate gaps in post-discharge follow-up: missed appointments, medication noncompliance, or incomplete treatment courses. These gaps contributed to the readmission and suggest the discharge plan was inadequate or patient adherence support was insufficient.",
+        "recommendation": "Review discharge planning process. Consider enhanced transitional care: 48-hour post-discharge phone calls, medication delivery programs, and home health assessment. Refer to case management for high-risk patient identification.",
+        "financialImpact": -2058
+      }
+    ],
+    "agentSummary": "2 findings identified. Readmission was potentially preventable (preventability score: 55%). HRRP target condition: CHF. Clinical relatedness: Likely Related.",
+    "agentConfidence": 76,
+    "bundleSavings": 3430,
+    "hrrpPenaltyRisk": 65,
+    "reviewedAt": "2026-02-19T18:14:51.602Z"
+  },
+  {
+    "id": "RA-002",
+    "indexClaimId": "IDX-002",
+    "indexProviderId": "PRV-003",
+    "indexProviderName": "St. Mary's Regional",
+    "indexBeneficiaryId": "BEN-1003",
+    "indexBeneficiaryName": "Dorothy Martinez",
+    "indexAdmissionDate": "2025-12-15",
+    "indexDischargeDate": "2025-12-19",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 4,
+    "indexAttendingPhysicianName": "Dr. James Wright",
+    "indexAttendingSpecialty": "Pulmonology",
+    "indexDRG": "193",
+    "indexDRGDescription": "Simple Pneumonia & Pleurisy w MCC",
+    "indexBilledAmount": 11152,
+    "indexPrimaryDiagnosis": {
+      "code": "J18.9",
+      "description": "Pneumonia, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "indexClinicalNotes": "72-year-old female admitted with community-acquired pneumonia and acute hypoxemic respiratory failure. Required 4L O2 via nasal cannula. IV levofloxacin and ceftriaxone. Improved clinically. Discharged on oral levofloxacin to complete 7-day course. Follow-up chest X-ray in 6 weeks.",
+    "indexDischargePlan": "Home with oral antibiotics. Complete 7-day course of levofloxacin. Follow-up with PCP in 1 week. Chest X-ray in 6 weeks. Return to ED for fever, worsening cough, or difficulty breathing.",
+    "readmitClaimId": "RDM-002",
+    "readmitProviderId": "PRV-003",
+    "readmitProviderName": "St. Mary's Regional",
+    "readmitAdmissionDate": "2025-12-26",
+    "readmitDischargeDate": "2025-12-31",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "SNF",
+    "readmitLengthOfStay": 5,
+    "readmitAttendingPhysicianName": "Dr. James Wright",
+    "readmitAttendingSpecialty": "Pulmonology",
+    "readmitDRG": "193",
+    "readmitDRGDescription": "Simple Pneumonia & Pleurisy w MCC",
+    "readmitBilledAmount": 11152,
+    "readmitPrimaryDiagnosis": {
+      "code": "J18.9",
+      "description": "Pneumonia, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "R65.20",
+        "description": "Severe sepsis without septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "readmitClinicalNotes": "72-year-old female readmitted 7 days post-discharge with worsening pneumonia progressing to sepsis. Culture grew same organism (Streptococcus pneumoniae) as index admission. Did not complete oral antibiotic course — stopped taking after 3 days due to GI upset. Required escalation to IV meropenem. Suggests incomplete treatment of original infection.",
+    "daysBetween": 7,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 22304,
+    "hrrpTargetCondition": "Pneumonia",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Bundle Candidate",
+    "riskScore": 68,
+    "clinicalRelatedness": "Likely Related",
+    "preventabilityScore": 60,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-001",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission has the same principal diagnosis category as the index admission (J18.9 -> J18.9: Pneumonia, unspecified organism). This strongly suggests the readmission is clinically related to the index stay and may represent incomplete treatment or disease recurrence.",
+        "recommendation": "Review index discharge to assess whether treatment was adequate. Evaluate if the readmission could have been prevented with more aggressive treatment, closer follow-up, or extended index stay.",
+        "financialImpact": -11152
+      },
+      {
+        "ruleId": "RULE-RA-CR-003",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission represents progression or recurrence of the index condition. Shared diagnosis codes: J18.9, J96.00. Clinical notes indicate the index condition was not fully resolved at discharge.",
+        "recommendation": "Review whether the index treatment course was adequate. Evaluate if the index length of stay was sufficient for clinical stabilization. Document root cause for quality reporting.",
+        "financialImpact": -7806.4
+      },
+      {
+        "ruleId": "RULE-RA-DA-003",
+        "category": "DISCHARGE_ADEQUACY",
+        "severity": "Medium",
+        "description": "Readmission notes indicate gaps in post-discharge follow-up: missed appointments, medication noncompliance, or incomplete treatment courses. These gaps contributed to the readmission and suggest the discharge plan was inadequate or patient adherence support was insufficient.",
+        "recommendation": "Review discharge planning process. Consider enhanced transitional care: 48-hour post-discharge phone calls, medication delivery programs, and home health assessment. Refer to case management for high-risk patient identification.",
+        "financialImpact": -3345.6
+      },
+      {
+        "ruleId": "RULE-RA-DB-001",
+        "category": "DRG_BUNDLING",
+        "severity": "Critical",
+        "description": "Both admissions have identical DRG assignments (193: Simple Pneumonia & Pleurisy w MCC) within 7 days. This pattern is consistent with DRG unbundling — splitting a single episode into two admissions to bill two DRG payments. Combined billing: $22,304.",
+        "recommendation": "Strongly consider bundling these admissions as a single episode of care. If bundled, reimburse only one DRG payment. Refer to Special Investigations Unit (SIU) if pattern is repeated across multiple patients at this facility.",
+        "financialImpact": -11152
+      }
+    ],
+    "agentSummary": "4 findings identified (1 critical). Readmission 7 days after discharge is a strong bundle candidate. Estimated savings if bundled: $11,152. Clinical relatedness: Likely Related.",
+    "agentConfidence": 64,
+    "bundleSavings": 11152,
+    "hrrpPenaltyRisk": 85,
+    "reviewedAt": "2026-02-19T18:14:51.807Z"
+  },
+  {
+    "id": "RA-003",
+    "indexClaimId": "IDX-003",
+    "indexProviderId": "PRV-005",
+    "indexProviderName": "University Medical Center",
+    "indexBeneficiaryId": "BEN-1008",
+    "indexBeneficiaryName": "James Anderson",
+    "indexAdmissionDate": "2025-12-01",
+    "indexDischargeDate": "2025-12-05",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 4,
+    "indexAttendingPhysicianName": "Dr. Robert Kim",
+    "indexAttendingSpecialty": "Cardiology",
+    "indexDRG": "280",
+    "indexDRGDescription": "Acute Myocardial Infarction, Discharged Alive w MCC",
+    "indexBilledAmount": 10901,
+    "indexPrimaryDiagnosis": {
+      "code": "I21.09",
+      "description": "ST elevation myocardial infarction involving other coronary artery of anterior wall",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "I50.9",
+        "description": "Heart failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "E11.65",
+        "description": "Type 2 DM with hyperglycemia",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "indexClinicalNotes": "68-year-old male admitted with anterior STEMI. Emergent PCI with drug-eluting stent to LAD. Post-PCI course uncomplicated. Started on dual antiplatelet therapy, statin, beta-blocker, ACE inhibitor. EF 40% post-MI. Cardiac rehab referral placed.",
+    "indexDischargePlan": "Discharge home. Dual antiplatelet therapy (aspirin + clopidogrel) for 12 months. Cardiac rehab starting week 2. Cardiology follow-up in 2 weeks. Echocardiogram in 6 weeks.",
+    "readmitClaimId": "RDM-003",
+    "readmitProviderId": "PRV-005",
+    "readmitProviderName": "University Medical Center",
+    "readmitAdmissionDate": "2025-12-20",
+    "readmitDischargeDate": "2025-12-22",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 2,
+    "readmitAttendingPhysicianName": "Dr. Robert Kim",
+    "readmitAttendingSpecialty": "Cardiology",
+    "readmitDRG": "292",
+    "readmitDRGDescription": "Heart Failure & Shock w CC",
+    "readmitBilledAmount": 6860,
+    "readmitPrimaryDiagnosis": {
+      "code": "I50.33",
+      "description": "Acute on chronic diastolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "I25.10",
+        "description": "Atherosclerotic heart disease of native coronary artery",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "E11.65",
+        "description": "Type 2 DM with hyperglycemia",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "readmitClinicalNotes": "68-year-old male readmitted 15 days post-STEMI with CHF exacerbation. BNP 1650. Volume overloaded with bilateral lower extremity edema and crackles. EF decreased from 40% to 32%. Post-MI heart failure is a known complication. Responded to IV diuresis. This readmission is directly related to the index MI hospitalization.",
+    "daysBetween": 15,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 17761,
+    "hrrpTargetCondition": "AMI",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Clinically Related",
+    "riskScore": 24,
+    "clinicalRelatedness": "Definitely Related",
+    "preventabilityScore": 10,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-002",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "Critical",
+        "description": "Readmission appears to be a direct complication of treatment provided during the index admission. Complication/adverse event codes and/or clinical documentation support a treatment-related readmission. This is clinically related and potentially preventable.",
+        "recommendation": "Refer to quality committee for root cause analysis. Evaluate index treatment protocols, surgical technique, medication management, and post-discharge monitoring. Consider whether the readmission should be bundled with the index stay for payment purposes.",
+        "financialImpact": -6860
+      }
+    ],
+    "agentSummary": "1 finding identified. Clinical relatedness: Definitely Related. Preventability: 10%. HRRP target: AMI.",
+    "agentConfidence": 82,
+    "bundleSavings": 0,
+    "hrrpPenaltyRisk": 40,
+    "reviewedAt": "2026-02-19T18:14:52.011Z"
+  },
+  {
+    "id": "RA-004",
+    "indexClaimId": "IDX-004",
+    "indexProviderId": "PRV-002",
+    "indexProviderName": "City Medical Center",
+    "indexBeneficiaryId": "BEN-1010",
+    "indexBeneficiaryName": "Patricia Taylor",
+    "indexAdmissionDate": "2025-12-05",
+    "indexDischargeDate": "2025-12-09",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 4,
+    "indexAttendingPhysicianName": "Dr. Michael Torres",
+    "indexAttendingSpecialty": "Pulmonology",
+    "indexDRG": "190",
+    "indexDRGDescription": "COPD w MCC",
+    "indexBilledAmount": 9436,
+    "indexPrimaryDiagnosis": {
+      "code": "J44.1",
+      "description": "Chronic obstructive pulmonary disease with acute exacerbation",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "indexClinicalNotes": "71-year-old female admitted with severe COPD exacerbation. Required BiPAP for 48 hours. IV methylprednisolone and nebulizers q4h. Sputum culture negative. Oxygen weaned to 2L NC. Discharged on prednisone taper and home nebulizer.",
+    "indexDischargePlan": "Home with home oxygen 2L NC. Prednisone taper over 10 days. Albuterol/ipratropium nebulizer q6h. Pulmonology follow-up in 1 week. Smoking cessation counseling provided.",
+    "readmitClaimId": "RDM-004",
+    "readmitProviderId": "PRV-002",
+    "readmitProviderName": "City Medical Center",
+    "readmitAdmissionDate": "2025-12-14",
+    "readmitDischargeDate": "2025-12-18",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 4,
+    "readmitAttendingPhysicianName": "Dr. Michael Torres",
+    "readmitAttendingSpecialty": "Pulmonology",
+    "readmitDRG": "190",
+    "readmitDRGDescription": "COPD w MCC",
+    "readmitBilledAmount": 9436,
+    "readmitPrimaryDiagnosis": {
+      "code": "J44.1",
+      "description": "Chronic obstructive pulmonary disease with acute exacerbation",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "readmitClinicalNotes": "71-year-old female readmitted just 5 days after discharge with recurrent COPD exacerbation. Same presentation — acute respiratory failure requiring BiPAP. Patient had completed only 5 of 10 day prednisone taper. Continued smoking. No pulmonology follow-up occurred. Identical DRG as index stay — raises concern for premature discharge or inadequate discharge planning.",
+    "daysBetween": 5,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 18872,
+    "hrrpTargetCondition": "COPD",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Bundle Candidate",
+    "riskScore": 64,
+    "clinicalRelatedness": "Likely Related",
+    "preventabilityScore": 60,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-001",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission has the same principal diagnosis category as the index admission (J44.1 -> J44.1: Chronic obstructive pulmonary disease with acute exacerbation). This strongly suggests the readmission is clinically related to the index stay and may represent incomplete treatment or disease recurrence.",
+        "recommendation": "Review index discharge to assess whether treatment was adequate. Evaluate if the readmission could have been prevented with more aggressive treatment, closer follow-up, or extended index stay.",
+        "financialImpact": -9436
+      },
+      {
+        "ruleId": "RULE-RA-DA-003",
+        "category": "DISCHARGE_ADEQUACY",
+        "severity": "Medium",
+        "description": "Readmission notes indicate gaps in post-discharge follow-up: missed appointments, medication noncompliance, or incomplete treatment courses. These gaps contributed to the readmission and suggest the discharge plan was inadequate or patient adherence support was insufficient.",
+        "recommendation": "Review discharge planning process. Consider enhanced transitional care: 48-hour post-discharge phone calls, medication delivery programs, and home health assessment. Refer to case management for high-risk patient identification.",
+        "financialImpact": -2830.7999999999997
+      },
+      {
+        "ruleId": "RULE-RA-DB-001",
+        "category": "DRG_BUNDLING",
+        "severity": "Critical",
+        "description": "Both admissions have identical DRG assignments (190: COPD w MCC) within 5 days. This pattern is consistent with DRG unbundling — splitting a single episode into two admissions to bill two DRG payments. Combined billing: $18,872.",
+        "recommendation": "Strongly consider bundling these admissions as a single episode of care. If bundled, reimburse only one DRG payment. Refer to Special Investigations Unit (SIU) if pattern is repeated across multiple patients at this facility.",
+        "financialImpact": -9436
+      }
+    ],
+    "agentSummary": "3 findings identified (1 critical). Readmission 5 days after discharge is a strong bundle candidate. Estimated savings if bundled: $9,436. Clinical relatedness: Likely Related.",
+    "agentConfidence": 70,
+    "bundleSavings": 9436,
+    "hrrpPenaltyRisk": 85,
+    "reviewedAt": "2026-02-19T18:14:52.212Z"
+  },
+  {
+    "id": "RA-005",
+    "indexClaimId": "IDX-005",
+    "indexProviderId": "PRV-004",
+    "indexProviderName": "Memorial Health System",
+    "indexBeneficiaryId": "BEN-1018",
+    "indexBeneficiaryName": "Helen Clark",
+    "indexAdmissionDate": "2025-11-28",
+    "indexDischargeDate": "2025-12-03",
+    "indexAdmissionType": "Elective",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 5,
+    "indexAttendingPhysicianName": "Dr. Lisa Park",
+    "indexAttendingSpecialty": "Orthopedic Surgery",
+    "indexDRG": "470",
+    "indexDRGDescription": "Major Joint Replacement w/o MCC",
+    "indexBilledAmount": 18500,
+    "indexPrimaryDiagnosis": {
+      "code": "M16.11",
+      "description": "Primary osteoarthritis, right hip",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E78.5",
+        "description": "Hyperlipidemia, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "indexClinicalNotes": "74-year-old female admitted for elective right total hip arthroplasty. Surgery uncomplicated. Post-op day 1: ambulated with PT. Day 2: stairs training. Discharged on day 5 with home PT referral. DVT prophylaxis with enoxaparin x 28 days.",
+    "indexDischargePlan": "Home with home PT 3x/week. Enoxaparin 40mg SQ daily x 28 days. Orthopedic follow-up in 2 weeks. Weight bearing as tolerated. Hip precautions x 6 weeks.",
+    "readmitClaimId": "RDM-005",
+    "readmitProviderId": "PRV-004",
+    "readmitProviderName": "Memorial Health System",
+    "readmitAdmissionDate": "2025-12-10",
+    "readmitDischargeDate": "2025-12-15",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "SNF",
+    "readmitLengthOfStay": 5,
+    "readmitAttendingPhysicianName": "Dr. Lisa Park",
+    "readmitAttendingSpecialty": "Orthopedic Surgery",
+    "readmitDRG": "480",
+    "readmitDRGDescription": "Hip & Femur Procedures Except Major Joint w MCC",
+    "readmitBilledAmount": 22400,
+    "readmitPrimaryDiagnosis": {
+      "code": "T84.54XA",
+      "description": "Periprosthetic osteolysis of internal prosthetic right hip joint",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "T81.41XA",
+        "description": "Infection following a procedure, superficial incisional SSI",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "M96.69",
+        "description": "Fracture of bone following insertion of orthopedic implant",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "readmitClinicalNotes": "74-year-old female readmitted 7 days after right total hip arthroplasty with surgical site infection and periprosthetic fracture. Required surgical washout and revision. This is a direct complication of the index surgical procedure. Postoperative complication — potentially preventable with different surgical technique or perioperative protocol.",
+    "daysBetween": 7,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 40900,
+    "hrrpTargetCondition": "Hip/Knee",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Potentially Preventable",
+    "riskScore": 44,
+    "clinicalRelatedness": "Definitely Related",
+    "preventabilityScore": 35,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-002",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "Critical",
+        "description": "Readmission appears to be a direct complication of treatment provided during the index admission. Complication/adverse event codes and/or clinical documentation support a treatment-related readmission. This is clinically related and potentially preventable.",
+        "recommendation": "Refer to quality committee for root cause analysis. Evaluate index treatment protocols, surgical technique, medication management, and post-discharge monitoring. Consider whether the readmission should be bundled with the index stay for payment purposes.",
+        "financialImpact": -22400
+      },
+      {
+        "ruleId": "RULE-RA-QC-002",
+        "category": "QUALITY_CONCERN",
+        "severity": "High",
+        "description": "Readmission for a surgical complication within 30 days of an elective surgical procedure. This is a patient safety indicator (PSI) event that should be reported. Consider whether the complication was preventable.",
+        "recommendation": "Report as Patient Safety Indicator event. Conduct surgical M&M (morbidity and mortality) review. Evaluate perioperative protocols (antibiotic prophylaxis, surgical technique, sterile technique). Flag for CMS quality reporting.",
+        "financialImpact": -22400
+      }
+    ],
+    "agentSummary": "2 findings identified. Readmission was potentially preventable (preventability score: 35%). HRRP target condition: Hip/Knee. Clinical relatedness: Definitely Related.",
+    "agentConfidence": 76,
+    "bundleSavings": 11200,
+    "hrrpPenaltyRisk": 60,
+    "reviewedAt": "2026-02-19T18:14:52.417Z"
+  },
+  {
+    "id": "RA-006",
+    "indexClaimId": "IDX-006",
+    "indexProviderId": "PRV-001",
+    "indexProviderName": "General Hospital",
+    "indexBeneficiaryId": "BEN-1006",
+    "indexBeneficiaryName": "William Davis",
+    "indexAdmissionDate": "2025-12-08",
+    "indexDischargeDate": "2025-12-12",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 4,
+    "indexAttendingPhysicianName": "Dr. Sarah Chen",
+    "indexAttendingSpecialty": "Internal Medicine",
+    "indexDRG": "871",
+    "indexDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "indexBilledAmount": 17900,
+    "indexPrimaryDiagnosis": {
+      "code": "A41.9",
+      "description": "Sepsis, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "R65.20",
+        "description": "Severe sepsis without septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N39.0",
+        "description": "Urinary tract infection",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "indexClinicalNotes": "80-year-old male admitted with urosepsis. Blood cultures grew E. coli. IV piperacillin-tazobactam. Responded well to antibiotics. Discharged on oral ciprofloxacin to complete 14-day course.",
+    "indexDischargePlan": "Home. Complete oral ciprofloxacin x 14 days total. PCP follow-up in 5 days. Repeat urinalysis in 2 weeks.",
+    "readmitClaimId": "RDM-006",
+    "readmitProviderId": "PRV-001",
+    "readmitProviderName": "General Hospital",
+    "readmitAdmissionDate": "2026-01-05",
+    "readmitDischargeDate": "2026-01-08",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 3,
+    "readmitAttendingPhysicianName": "Dr. Sarah Chen",
+    "readmitAttendingSpecialty": "Internal Medicine",
+    "readmitDRG": "603",
+    "readmitDRGDescription": "Cellulitis w/o MCC",
+    "readmitBilledAmount": 5500,
+    "readmitPrimaryDiagnosis": {
+      "code": "L03.115",
+      "description": "Cellulitis of right lower limb",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "readmitClinicalNotes": "80-year-old male readmitted 24 days after discharge for cellulitis of right lower extremity. Unrelated to prior urosepsis admission. New condition — no prior skin complaints. Diabetic with peripheral neuropathy. Required IV vancomycin. This appears to be a new, clinically unrelated condition.",
+    "daysBetween": 24,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 23400,
+    "isPlannedReadmission": false,
+    "reviewStatus": "Not Related",
+    "riskScore": 4,
+    "clinicalRelatedness": "Not Related",
+    "preventabilityScore": 10,
+    "readmissionFindings": [],
+    "agentSummary": "Readmission for Cellulitis of right lower limb appears clinically unrelated to the index admission for Sepsis, unspecified organism. Different diagnosis, appropriate timing. Separate payment appropriate.",
+    "agentConfidence": 90,
+    "bundleSavings": 0,
+    "hrrpPenaltyRisk": 0,
+    "reviewedAt": "2026-02-19T18:14:52.618Z"
+  },
+  {
+    "id": "RA-007",
+    "indexClaimId": "IDX-007",
+    "indexProviderId": "PRV-005",
+    "indexProviderName": "University Medical Center",
+    "indexBeneficiaryId": "BEN-1014",
+    "indexBeneficiaryName": "Barbara Wilson",
+    "indexAdmissionDate": "2025-12-12",
+    "indexDischargeDate": "2025-12-14",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 2,
+    "indexAttendingPhysicianName": "Dr. Robert Kim",
+    "indexAttendingSpecialty": "Cardiology",
+    "indexDRG": "292",
+    "indexDRGDescription": "Heart Failure & Shock w CC",
+    "indexBilledAmount": 6860,
+    "indexPrimaryDiagnosis": {
+      "code": "I50.33",
+      "description": "Acute on chronic diastolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "N18.4",
+        "description": "Chronic kidney disease, stage 4",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "indexClinicalNotes": "69-year-old female admitted with mild CHF exacerbation. BNP 890. Responded quickly to one dose IV furosemide. Weight loss 3 lbs. Very short stay — 2 days. Discharged without medication changes. Minimal diuresis. Questionable whether full inpatient stay was warranted vs observation.",
+    "indexDischargePlan": "Home. Continue current medications unchanged. Cardiology follow-up in 2 weeks. Daily weights.",
+    "readmitClaimId": "RDM-007",
+    "readmitProviderId": "PRV-005",
+    "readmitProviderName": "University Medical Center",
+    "readmitAdmissionDate": "2025-12-17",
+    "readmitDischargeDate": "2025-12-20",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 3,
+    "readmitAttendingPhysicianName": "Dr. Robert Kim",
+    "readmitAttendingSpecialty": "Cardiology",
+    "readmitDRG": "291",
+    "readmitDRGDescription": "Heart Failure & Shock w MCC",
+    "readmitBilledAmount": 14100,
+    "readmitPrimaryDiagnosis": {
+      "code": "I50.33",
+      "description": "Acute on chronic diastolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "N17.9",
+        "description": "Acute kidney failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N18.4",
+        "description": "Chronic kidney disease, stage 4",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "readmitClinicalNotes": "69-year-old female readmitted just 3 days after discharge with worsening CHF. Now with AKI on CKD. BNP 2100. Required continuous IV furosemide drip. Identical principal diagnosis to index stay. Very rapid readmission strongly suggests premature discharge from index admission — inadequate diuresis during 2-day stay. These two admissions may represent a single episode of care.",
+    "daysBetween": 3,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 20960,
+    "hrrpTargetCondition": "CHF",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Potentially Preventable",
+    "riskScore": 75,
+    "clinicalRelatedness": "Definitely Related",
+    "preventabilityScore": 70,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-001",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission has the same principal diagnosis category as the index admission (I50.33 -> I50.33: Acute on chronic diastolic heart failure). This strongly suggests the readmission is clinically related to the index stay and may represent incomplete treatment or disease recurrence.",
+        "recommendation": "Review index discharge to assess whether treatment was adequate. Evaluate if the readmission could have been prevented with more aggressive treatment, closer follow-up, or extended index stay.",
+        "financialImpact": -14100
+      },
+      {
+        "ruleId": "RULE-RA-CR-003",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission represents progression or recurrence of the index condition. Shared diagnosis codes: I50.33, N18.4. Clinical notes indicate the index condition was not fully resolved at discharge.",
+        "recommendation": "Review whether the index treatment course was adequate. Evaluate if the index length of stay was sufficient for clinical stabilization. Document root cause for quality reporting.",
+        "financialImpact": -9870
+      },
+      {
+        "ruleId": "RULE-RA-DA-001",
+        "category": "DISCHARGE_ADEQUACY",
+        "severity": "Critical",
+        "description": "Index stay of only 2 days followed by readmission in 3 days with the same or worsened condition. Pattern strongly suggests premature discharge from the index admission. These two stays may represent a single episode of care.",
+        "recommendation": "Consider bundling these two admissions as a single episode. Review index discharge decision-making. If bundled, only the higher-weighted DRG should be reimbursed. Flag for case management review.",
+        "financialImpact": -14100
+      },
+      {
+        "ruleId": "RULE-RA-TP-002",
+        "category": "TIMING_PATTERN",
+        "severity": "High",
+        "description": "Readmission occurred within 3 days of discharge. Very rapid readmissions (<=3 days) have the highest correlation with premature discharge or continuation of the same episode of care. This timing pattern warrants close scrutiny for potential bundling.",
+        "recommendation": "Conduct detailed clinical review to determine if this is a single episode of care. If so, bundle the two admissions. Consider denying the readmission if it represents the same treatment episode.",
+        "financialImpact": -14100
+      }
+    ],
+    "agentSummary": "4 findings identified. Readmission was potentially preventable (preventability score: 70%). HRRP target condition: CHF. Clinical relatedness: Definitely Related.",
+    "agentConfidence": 64,
+    "bundleSavings": 7050,
+    "hrrpPenaltyRisk": 85,
+    "reviewedAt": "2026-02-19T18:14:52.821Z"
+  },
+  {
+    "id": "RA-008",
+    "indexClaimId": "IDX-008",
+    "indexProviderId": "PRV-003",
+    "indexProviderName": "St. Mary's Regional",
+    "indexBeneficiaryId": "BEN-1016",
+    "indexBeneficiaryName": "Richard Lee",
+    "indexAdmissionDate": "2025-12-01",
+    "indexDischargeDate": "2025-12-06",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 5,
+    "indexAttendingPhysicianName": "Dr. James Wright",
+    "indexAttendingSpecialty": "Cardiology",
+    "indexDRG": "280",
+    "indexDRGDescription": "Acute Myocardial Infarction, Discharged Alive w MCC",
+    "indexBilledAmount": 10901,
+    "indexPrimaryDiagnosis": {
+      "code": "I21.4",
+      "description": "Non-ST elevation myocardial infarction",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "I50.9",
+        "description": "Heart failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "indexClinicalNotes": "75-year-old male admitted with NSTEMI. Troponin I peaked at 8.2. Cardiac catheterization showed 3-vessel disease — LAD 90%, RCA 85%, LCx 70%. Not amenable to PCI. Referred for CABG. Medically managed and stabilized for planned CABG within 2 weeks.",
+    "indexDischargePlan": "Home. Pre-CABG workup outpatient. Planned readmission for CABG in 10-14 days. Continue aspirin, atorvastatin, metoprolol. Pre-op labs and chest X-ray in 1 week.",
+    "readmitClaimId": "RDM-008",
+    "readmitProviderId": "PRV-003",
+    "readmitProviderName": "St. Mary's Regional",
+    "readmitAdmissionDate": "2025-12-14",
+    "readmitDischargeDate": "2025-12-22",
+    "readmitAdmissionType": "Elective",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 8,
+    "readmitAttendingPhysicianName": "Dr. James Wright",
+    "readmitAttendingSpecialty": "Cardiothoracic Surgery",
+    "readmitDRG": "236",
+    "readmitDRGDescription": "Coronary Bypass w/o Cardiac Cath w/o MCC",
+    "readmitBilledAmount": 45000,
+    "readmitPrimaryDiagnosis": {
+      "code": "I25.10",
+      "description": "Atherosclerotic heart disease of native coronary artery",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "I21.4",
+        "description": "Non-ST elevation myocardial infarction",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "readmitClinicalNotes": "75-year-old male admitted for planned CABG x 3 (LIMA to LAD, SVG to RCA, SVG to LCx). This is a planned, staged readmission for surgical revascularization following index NSTEMI admission. Surgery uncomplicated. Post-op recovery per protocol. Planned readmission documented in index discharge summary.",
+    "daysBetween": 8,
+    "sameFacility": true,
+    "sameAttending": false,
+    "combinedBilledAmount": 55901,
+    "hrrpTargetCondition": "CABG",
+    "isPlannedReadmission": true,
+    "reviewStatus": "Planned",
+    "riskScore": 2,
+    "clinicalRelatedness": "Not Related",
+    "preventabilityScore": 0,
+    "readmissionFindings": [],
+    "agentSummary": "Planned readmission for Atherosclerotic heart disease of native coronary artery. Documented in index discharge plan. No adverse findings — separate payment appropriate.",
+    "agentConfidence": 90,
+    "bundleSavings": 0,
+    "hrrpPenaltyRisk": 5,
+    "reviewedAt": "2026-02-19T18:14:53.022Z"
+  },
+  {
+    "id": "RA-009",
+    "indexClaimId": "IDX-009",
+    "indexProviderId": "PRV-002",
+    "indexProviderName": "City Medical Center",
+    "indexBeneficiaryId": "BEN-1002",
+    "indexBeneficiaryName": "Robert Williams",
+    "indexAdmissionDate": "2025-12-18",
+    "indexDischargeDate": "2025-12-20",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 2,
+    "indexAttendingPhysicianName": "Dr. Michael Torres",
+    "indexAttendingSpecialty": "Internal Medicine",
+    "indexDRG": "690",
+    "indexDRGDescription": "Kidney & Urinary Tract Infections w/o MCC",
+    "indexBilledAmount": 5756,
+    "indexPrimaryDiagnosis": {
+      "code": "N39.0",
+      "description": "Urinary tract infection, site not specified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "indexClinicalNotes": "65-year-old male admitted with complicated UTI. Short stay, responded to IV antibiotics, transitioned to oral. Discharged with 7-day ciprofloxacin course.",
+    "indexDischargePlan": "Home with oral antibiotics. PCP follow-up in 3 days. Repeat UA in 1 week.",
+    "readmitClaimId": "RDM-009",
+    "readmitProviderId": "PRV-002",
+    "readmitProviderName": "City Medical Center",
+    "readmitAdmissionDate": "2025-12-21",
+    "readmitDischargeDate": "2025-12-24",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 3,
+    "readmitAttendingPhysicianName": "Dr. Michael Torres",
+    "readmitAttendingSpecialty": "Internal Medicine",
+    "readmitDRG": "871",
+    "readmitDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "readmitBilledAmount": 17900,
+    "readmitPrimaryDiagnosis": {
+      "code": "A41.9",
+      "description": "Sepsis, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "R65.20",
+        "description": "Severe sepsis without septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N39.0",
+        "description": "Urinary tract infection",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "readmitClinicalNotes": "65-year-old male readmitted next day with urosepsis — UTI progressed to sepsis. Same urinary source. Blood cultures positive for E. coli, same organism from index admission UA. This represents clear progression of the incompletely treated index condition. Readmission 1 day after discharge with escalation to sepsis — strong bundle candidate.",
+    "daysBetween": 1,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 23656,
+    "isPlannedReadmission": false,
+    "reviewStatus": "Clinically Related",
+    "riskScore": 25,
+    "clinicalRelatedness": "Likely Related",
+    "preventabilityScore": 35,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-003",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission represents progression or recurrence of the index condition. Shared diagnosis codes: N39.0. Clinical notes indicate the index condition was not fully resolved at discharge.",
+        "recommendation": "Review whether the index treatment course was adequate. Evaluate if the index length of stay was sufficient for clinical stabilization. Document root cause for quality reporting.",
+        "financialImpact": -12530
+      },
+      {
+        "ruleId": "RULE-RA-TP-002",
+        "category": "TIMING_PATTERN",
+        "severity": "High",
+        "description": "Readmission occurred within 1 day of discharge. Very rapid readmissions (<=3 days) have the highest correlation with premature discharge or continuation of the same episode of care. This timing pattern warrants close scrutiny for potential bundling.",
+        "recommendation": "Conduct detailed clinical review to determine if this is a single episode of care. If so, bundle the two admissions. Consider denying the readmission if it represents the same treatment episode.",
+        "financialImpact": -17900
+      },
+      {
+        "ruleId": "RULE-RA-DOC-001",
+        "category": "DOCUMENTATION_GAP",
+        "severity": "Medium",
+        "description": "Index admission has a missing or inadequate discharge plan. Comprehensive discharge planning is a key element of readmission prevention. Without documented follow-up arrangements, medication reconciliation, and patient education, readmission risk is significantly elevated.",
+        "recommendation": "Require comprehensive discharge summary with: follow-up appointments, medication list with changes highlighted, warning signs education, and contact information for questions. Implement discharge planning checklist.",
+        "financialImpact": -3580
+      }
+    ],
+    "agentSummary": "3 findings identified. Clinical relatedness: Likely Related. Preventability: 35%.",
+    "agentConfidence": 70,
+    "bundleSavings": 0,
+    "hrrpPenaltyRisk": 0,
+    "reviewedAt": "2026-02-19T18:14:53.224Z"
+  },
+  {
+    "id": "RA-010",
+    "indexClaimId": "IDX-010",
+    "indexProviderId": "PRV-004",
+    "indexProviderName": "Memorial Health System",
+    "indexBeneficiaryId": "BEN-1012",
+    "indexBeneficiaryName": "Thomas Brown",
+    "indexAdmissionDate": "2025-11-25",
+    "indexDischargeDate": "2025-11-30",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 5,
+    "indexAttendingPhysicianName": "Dr. Amanda Harris",
+    "indexAttendingSpecialty": "Internal Medicine",
+    "indexDRG": "291",
+    "indexDRGDescription": "Heart Failure & Shock w MCC",
+    "indexBilledAmount": 14100,
+    "indexPrimaryDiagnosis": {
+      "code": "I50.23",
+      "description": "Acute on chronic systolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N18.4",
+        "description": "Chronic kidney disease, stage 4",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "indexClinicalNotes": "73-year-old male admitted with severe CHF exacerbation. EF 25%. Required ICU for respiratory failure. IV milrinone and furosemide drip. Diuresed 10L over 5 days. Discharged much improved. Complex patient — on transplant evaluation list.",
+    "indexDischargePlan": "Home with VNA. Daily weights, 1.5L fluid restriction, 2g sodium diet. Cardiology follow-up in 1 week. Heart failure clinic referral. Continue milrinone bridge to transplant evaluation.",
+    "readmitClaimId": "RDM-010",
+    "readmitProviderId": "PRV-004",
+    "readmitProviderName": "Memorial Health System",
+    "readmitAdmissionDate": "2025-12-28",
+    "readmitDischargeDate": "2026-01-02",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 5,
+    "readmitAttendingPhysicianName": "Dr. Amanda Harris",
+    "readmitAttendingSpecialty": "Internal Medicine",
+    "readmitDRG": "291",
+    "readmitDRGDescription": "Heart Failure & Shock w MCC",
+    "readmitBilledAmount": 14100,
+    "readmitPrimaryDiagnosis": {
+      "code": "I50.23",
+      "description": "Acute on chronic systolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N17.9",
+        "description": "Acute kidney failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "readmitClinicalNotes": "73-year-old male readmitted 28 days after discharge with recurrent CHF. End-stage heart failure EF 20%. This patient has advanced disease and readmissions may be difficult to prevent. Engaged in heart failure clinic, compliant with medications and diet. This readmission likely reflects disease severity rather than care gaps. Not a quality concern.",
+    "daysBetween": 28,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 28200,
+    "hrrpTargetCondition": "CHF",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Clinically Related",
+    "riskScore": 33,
+    "clinicalRelatedness": "Likely Related",
+    "preventabilityScore": 30,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-001",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission has the same principal diagnosis category as the index admission (I50.23 -> I50.23: Acute on chronic systolic heart failure). This strongly suggests the readmission is clinically related to the index stay and may represent incomplete treatment or disease recurrence.",
+        "recommendation": "Review index discharge to assess whether treatment was adequate. Evaluate if the readmission could have been prevented with more aggressive treatment, closer follow-up, or extended index stay.",
+        "financialImpact": -14100
+      }
+    ],
+    "agentSummary": "1 finding identified. Clinical relatedness: Likely Related. Preventability: 30%. HRRP target: CHF.",
+    "agentConfidence": 82,
+    "bundleSavings": 0,
+    "hrrpPenaltyRisk": 55,
+    "reviewedAt": "2026-02-19T18:14:53.426Z"
+  },
+  {
+    "id": "RA-011",
+    "indexClaimId": "IDX-011",
+    "indexProviderId": "PRV-001",
+    "indexProviderName": "General Hospital",
+    "indexBeneficiaryId": "BEN-1019",
+    "indexBeneficiaryName": "Nancy White",
+    "indexAdmissionDate": "2025-12-10",
+    "indexDischargeDate": "2025-12-13",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 3,
+    "indexAttendingPhysicianName": "Dr. David Patel",
+    "indexAttendingSpecialty": "General Surgery",
+    "indexDRG": "329",
+    "indexDRGDescription": "Major Small & Large Bowel Procedures w CC",
+    "indexBilledAmount": 21000,
+    "indexPrimaryDiagnosis": {
+      "code": "K35.80",
+      "description": "Unspecified acute appendicitis",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "indexClinicalNotes": "66-year-old female admitted with acute appendicitis. Laparoscopic appendectomy performed successfully. Post-op recovery uncomplicated. Tolerating diet, ambulating, afebrile. Discharged POD 2.",
+    "indexDischargePlan": "Home. Clear liquid diet advancing as tolerated. Wound care instructions. General surgery follow-up in 1 week. Return for fever, wound drainage, or abdominal pain.",
+    "readmitClaimId": "RDM-011",
+    "readmitProviderId": "PRV-001",
+    "readmitProviderName": "General Hospital",
+    "readmitAdmissionDate": "2025-12-18",
+    "readmitDischargeDate": "2025-12-22",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 4,
+    "readmitAttendingPhysicianName": "Dr. David Patel",
+    "readmitAttendingSpecialty": "General Surgery",
+    "readmitDRG": "371",
+    "readmitDRGDescription": "Major Gastrointestinal Disorders & Peritoneal Infections w CC",
+    "readmitBilledAmount": 13200,
+    "readmitPrimaryDiagnosis": {
+      "code": "K68.12",
+      "description": "Psoas muscle abscess",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "T81.49XA",
+        "description": "Infection following a procedure, other surgical site",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "readmitClinicalNotes": "66-year-old female readmitted 5 days after appendectomy with intra-abdominal abscess and fever. CT confirmed psoas abscess. Required CT-guided percutaneous drainage and IV antibiotics. Post-surgical complication directly related to index appendectomy. Potentially preventable surgical complication.",
+    "daysBetween": 5,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 34200,
+    "isPlannedReadmission": false,
+    "reviewStatus": "Clinically Related",
+    "riskScore": 18,
+    "clinicalRelatedness": "Definitely Related",
+    "preventabilityScore": 25,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-002",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "Critical",
+        "description": "Readmission appears to be a direct complication of treatment provided during the index admission. Complication/adverse event codes and/or clinical documentation support a treatment-related readmission. This is clinically related and potentially preventable.",
+        "recommendation": "Refer to quality committee for root cause analysis. Evaluate index treatment protocols, surgical technique, medication management, and post-discharge monitoring. Consider whether the readmission should be bundled with the index stay for payment purposes.",
+        "financialImpact": -13200
+      }
+    ],
+    "agentSummary": "1 finding identified. Clinical relatedness: Definitely Related. Preventability: 25%.",
+    "agentConfidence": 82,
+    "bundleSavings": 0,
+    "hrrpPenaltyRisk": 0,
+    "reviewedAt": "2026-02-19T18:14:53.628Z"
+  },
+  {
+    "id": "RA-012",
+    "indexClaimId": "IDX-012",
+    "indexProviderId": "PRV-005",
+    "indexProviderName": "University Medical Center",
+    "indexBeneficiaryId": "BEN-1020",
+    "indexBeneficiaryName": "Charles Garcia",
+    "indexAdmissionDate": "2025-12-05",
+    "indexDischargeDate": "2025-12-10",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 5,
+    "indexAttendingPhysicianName": "Dr. Robert Kim",
+    "indexAttendingSpecialty": "Cardiology",
+    "indexDRG": "291",
+    "indexDRGDescription": "Heart Failure & Shock w MCC",
+    "indexBilledAmount": 14100,
+    "indexPrimaryDiagnosis": {
+      "code": "I50.33",
+      "description": "Acute on chronic diastolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "I48.91",
+        "description": "Unspecified atrial fibrillation",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "indexClinicalNotes": "77-year-old male with advanced CHF and atrial fibrillation. Admitted with acute decompensation. IV furosemide and rate control. Discharged improved with medication adjustments.",
+    "indexDischargePlan": "Home. Increased furosemide to 80mg BID. Digoxin added for rate control. Cardiology follow-up in 5 days. Daily weights. 1.5L fluid restriction.",
+    "readmitClaimId": "RDM-012",
+    "readmitProviderId": "PRV-003",
+    "readmitProviderName": "St. Mary's Regional",
+    "readmitAdmissionDate": "2025-12-16",
+    "readmitDischargeDate": "2025-12-20",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 4,
+    "readmitAttendingPhysicianName": "Dr. James Wright",
+    "readmitAttendingSpecialty": "Internal Medicine",
+    "readmitDRG": "309",
+    "readmitDRGDescription": "Cardiac Arrhythmia & Conduction Disorders w CC",
+    "readmitBilledAmount": 5700,
+    "readmitPrimaryDiagnosis": {
+      "code": "I48.91",
+      "description": "Unspecified atrial fibrillation",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "I50.33",
+        "description": "Acute on chronic diastolic heart failure",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "R00.1",
+        "description": "Bradycardia, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "readmitClinicalNotes": "77-year-old male presented to different facility (St. Mary's) with symptomatic bradycardia and near-syncope. HR 38 bpm. Found to have digoxin toxicity — digoxin level 3.8 ng/mL (therapeutic 0.8-2.0). Digoxin was newly started at index discharge from University Medical Center 6 days ago. This readmission is an adverse drug event related to medication changes at index discharge.",
+    "daysBetween": 6,
+    "sameFacility": false,
+    "sameAttending": false,
+    "combinedBilledAmount": 19800,
+    "hrrpTargetCondition": "CHF",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Clinically Related",
+    "riskScore": 36,
+    "clinicalRelatedness": "Definitely Related",
+    "preventabilityScore": 25,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-002",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "Critical",
+        "description": "Readmission appears to be a direct complication of treatment provided during the index admission. Complication/adverse event codes and/or clinical documentation support a treatment-related readmission. This is clinically related and potentially preventable.",
+        "recommendation": "Refer to quality committee for root cause analysis. Evaluate index treatment protocols, surgical technique, medication management, and post-discharge monitoring. Consider whether the readmission should be bundled with the index stay for payment purposes.",
+        "financialImpact": -5700
+      }
+    ],
+    "agentSummary": "1 finding identified. Clinical relatedness: Definitely Related. Preventability: 25%. HRRP target: CHF.",
+    "agentConfidence": 82,
+    "bundleSavings": 0,
+    "hrrpPenaltyRisk": 60,
+    "reviewedAt": "2026-02-19T18:14:53.830Z"
+  },
+  {
+    "id": "RA-013",
+    "indexClaimId": "IDX-013",
+    "indexProviderId": "PRV-004",
+    "indexProviderName": "Memorial Health System",
+    "indexBeneficiaryId": "BEN-1005",
+    "indexBeneficiaryName": "Linda Miller",
+    "indexAdmissionDate": "2025-12-01",
+    "indexDischargeDate": "2025-12-04",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 3,
+    "indexAttendingPhysicianName": "Dr. Amanda Harris",
+    "indexAttendingSpecialty": "Internal Medicine",
+    "indexDRG": "193",
+    "indexDRGDescription": "Simple Pneumonia & Pleurisy w MCC",
+    "indexBilledAmount": 11152,
+    "indexPrimaryDiagnosis": {
+      "code": "J18.9",
+      "description": "Pneumonia, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "indexClinicalNotes": "70-year-old female with pneumonia and respiratory failure. Treated with IV antibiotics and supplemental O2. Improved and discharged on oral antibiotics.",
+    "indexDischargePlan": "Home with oral levofloxacin. Follow-up with PCP in 3 days.",
+    "readmitClaimId": "RDM-013",
+    "readmitProviderId": "PRV-004",
+    "readmitProviderName": "Memorial Health System",
+    "readmitAdmissionDate": "2026-01-10",
+    "readmitDischargeDate": "2026-01-14",
+    "readmitAdmissionType": "Elective",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 4,
+    "readmitAttendingPhysicianName": "Dr. David Patel",
+    "readmitAttendingSpecialty": "General Surgery",
+    "readmitDRG": "329",
+    "readmitDRGDescription": "Major Small & Large Bowel Procedures w CC",
+    "readmitBilledAmount": 21000,
+    "readmitPrimaryDiagnosis": {
+      "code": "K80.10",
+      "description": "Calculus of gallbladder with chronic cholecystitis",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "readmitClinicalNotes": "70-year-old female admitted for elective laparoscopic cholecystectomy. Known cholelithiasis with chronic cholecystitis. Planned surgery — no relation to prior pneumonia admission. Completely different diagnosis, different surgeon, elective procedure. This is a clinically unrelated readmission.",
+    "daysBetween": 37,
+    "sameFacility": true,
+    "sameAttending": false,
+    "combinedBilledAmount": 32152,
+    "isPlannedReadmission": true,
+    "reviewStatus": "Planned",
+    "riskScore": 0,
+    "clinicalRelatedness": "Not Related",
+    "preventabilityScore": 0,
+    "readmissionFindings": [],
+    "agentSummary": "Planned readmission for Calculus of gallbladder with chronic cholecystitis. Documented in index discharge plan. No adverse findings — separate payment appropriate.",
+    "agentConfidence": 90,
+    "bundleSavings": 0,
+    "hrrpPenaltyRisk": 0,
+    "reviewedAt": "2026-02-19T18:14:54.032Z"
+  },
+  {
+    "id": "RA-014",
+    "indexClaimId": "IDX-014",
+    "indexProviderId": "PRV-001",
+    "indexProviderName": "General Hospital",
+    "indexBeneficiaryId": "BEN-1003",
+    "indexBeneficiaryName": "Dorothy Martinez",
+    "indexAdmissionDate": "2025-12-20",
+    "indexDischargeDate": "2025-12-22",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "AMA",
+    "indexLengthOfStay": 2,
+    "indexAttendingPhysicianName": "Dr. Sarah Chen",
+    "indexAttendingSpecialty": "Internal Medicine",
+    "indexDRG": "871",
+    "indexDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "indexBilledAmount": 17900,
+    "indexPrimaryDiagnosis": {
+      "code": "A41.9",
+      "description": "Sepsis, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "R65.20",
+        "description": "Severe sepsis without septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "F10.239",
+        "description": "Alcohol dependence with withdrawal",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "indexClinicalNotes": "72-year-old female admitted with severe sepsis from skin abscess. History of alcohol dependence. Left AMA on day 2 against medical advice while still receiving IV antibiotics. Sepsis not fully resolved. Incomplete treatment course. AMA discharge documented.",
+    "indexDischargePlan": "Patient left AMA. Counseled on risks of premature departure including sepsis recurrence, organ failure, and death. Refused to sign AMA form. Prescriptions for oral antibiotics offered but patient left before receiving.",
+    "readmitClaimId": "RDM-014",
+    "readmitProviderId": "PRV-001",
+    "readmitProviderName": "General Hospital",
+    "readmitAdmissionDate": "2025-12-24",
+    "readmitDischargeDate": "2025-12-30",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 6,
+    "readmitAttendingPhysicianName": "Dr. Sarah Chen",
+    "readmitAttendingSpecialty": "Internal Medicine",
+    "readmitDRG": "871",
+    "readmitDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "readmitBilledAmount": 17900,
+    "readmitPrimaryDiagnosis": {
+      "code": "A41.9",
+      "description": "Sepsis, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "R65.21",
+        "description": "Severe sepsis with septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N17.9",
+        "description": "Acute kidney failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "readmitClinicalNotes": "72-year-old female readmitted 2 days after AMA discharge with septic shock. Same skin source. Now with organ failure — AKI and hemodynamic instability requiring vasopressors. Worsening of same condition that was being treated during index stay. AMA discharge directly led to this readmission. Identical principal diagnosis. These two stays represent a single episode of care interrupted by patient's AMA departure.",
+    "daysBetween": 2,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 35800,
+    "isPlannedReadmission": false,
+    "reviewStatus": "Bundle Candidate",
+    "riskScore": 75,
+    "clinicalRelatedness": "Definitely Related",
+    "preventabilityScore": 100,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-001",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission has the same principal diagnosis category as the index admission (A41.9 -> A41.9: Sepsis, unspecified organism). This strongly suggests the readmission is clinically related to the index stay and may represent incomplete treatment or disease recurrence.",
+        "recommendation": "Review index discharge to assess whether treatment was adequate. Evaluate if the readmission could have been prevented with more aggressive treatment, closer follow-up, or extended index stay.",
+        "financialImpact": -17900
+      },
+      {
+        "ruleId": "RULE-RA-CR-003",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission represents progression or recurrence of the index condition. Shared diagnosis codes: A41.9. Clinical notes indicate the index condition was not fully resolved at discharge.",
+        "recommendation": "Review whether the index treatment course was adequate. Evaluate if the index length of stay was sufficient for clinical stabilization. Document root cause for quality reporting.",
+        "financialImpact": -12530
+      },
+      {
+        "ruleId": "RULE-RA-DA-001",
+        "category": "DISCHARGE_ADEQUACY",
+        "severity": "Critical",
+        "description": "Index stay of only 2 days followed by readmission in 2 days with the same or worsened condition. Pattern strongly suggests premature discharge from the index admission. These two stays may represent a single episode of care.",
+        "recommendation": "Consider bundling these two admissions as a single episode. Review index discharge decision-making. If bundled, only the higher-weighted DRG should be reimbursed. Flag for case management review.",
+        "financialImpact": -17900
+      },
+      {
+        "ruleId": "RULE-RA-DA-002",
+        "category": "DISCHARGE_ADEQUACY",
+        "severity": "High",
+        "description": "Patient left the index admission Against Medical Advice (AMA) and was readmitted 2 days later with the same condition. The readmission represents continuation of the interrupted treatment course. CMS may consider this a single episode of care.",
+        "recommendation": "Review AMA discharge documentation. Evaluate whether bundling is appropriate. Note that AMA discharges followed by rapid readmission are a known HRRP concern. Consider enhanced discharge planning protocols for high-risk AMA patients.",
+        "financialImpact": -14320
+      },
+      {
+        "ruleId": "RULE-RA-TP-002",
+        "category": "TIMING_PATTERN",
+        "severity": "High",
+        "description": "Readmission occurred within 2 days of discharge. Very rapid readmissions (<=3 days) have the highest correlation with premature discharge or continuation of the same episode of care. This timing pattern warrants close scrutiny for potential bundling.",
+        "recommendation": "Conduct detailed clinical review to determine if this is a single episode of care. If so, bundle the two admissions. Consider denying the readmission if it represents the same treatment episode.",
+        "financialImpact": -17900
+      },
+      {
+        "ruleId": "RULE-RA-DB-001",
+        "category": "DRG_BUNDLING",
+        "severity": "Critical",
+        "description": "Both admissions have identical DRG assignments (871: Septicemia or Severe Sepsis w/o MV >96 Hours w MCC) within 2 days. This pattern is consistent with DRG unbundling — splitting a single episode into two admissions to bill two DRG payments. Combined billing: $35,800.",
+        "recommendation": "Strongly consider bundling these admissions as a single episode of care. If bundled, reimburse only one DRG payment. Refer to Special Investigations Unit (SIU) if pattern is repeated across multiple patients at this facility.",
+        "financialImpact": -17900
+      },
+      {
+        "ruleId": "RULE-RA-DOC-001",
+        "category": "DOCUMENTATION_GAP",
+        "severity": "Medium",
+        "description": "Index admission has a missing or inadequate discharge plan. Comprehensive discharge planning is a key element of readmission prevention. Without documented follow-up arrangements, medication reconciliation, and patient education, readmission risk is significantly elevated.",
+        "recommendation": "Require comprehensive discharge summary with: follow-up appointments, medication list with changes highlighted, warning signs education, and contact information for questions. Implement discharge planning checklist.",
+        "financialImpact": -3580
+      }
+    ],
+    "agentSummary": "7 findings identified (2 critical). Readmission 2 days after discharge is a strong bundle candidate. Estimated savings if bundled: $17,900. Clinical relatedness: Definitely Related.",
+    "agentConfidence": 55,
+    "bundleSavings": 17900,
+    "hrrpPenaltyRisk": 0,
+    "reviewedAt": "2026-02-19T18:14:54.235Z"
+  },
+  {
+    "id": "RA-015",
+    "indexClaimId": "IDX-015",
+    "indexProviderId": "PRV-002",
+    "indexProviderName": "City Medical Center",
+    "indexBeneficiaryId": "BEN-1007",
+    "indexBeneficiaryName": "Susan Garcia",
+    "indexAdmissionDate": "2025-12-15",
+    "indexDischargeDate": "2025-12-18",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Transferred",
+    "indexLengthOfStay": 3,
+    "indexAttendingPhysicianName": "Dr. Michael Torres",
+    "indexAttendingSpecialty": "Internal Medicine",
+    "indexDRG": "280",
+    "indexDRGDescription": "Acute Myocardial Infarction, Discharged Alive w MCC",
+    "indexBilledAmount": 10901,
+    "indexPrimaryDiagnosis": {
+      "code": "I21.09",
+      "description": "ST elevation myocardial infarction involving other coronary artery of anterior wall",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "I50.9",
+        "description": "Heart failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "indexClinicalNotes": "67-year-old female admitted with anterior STEMI. tPA administered. Stabilized. Transferred to University Medical Center for cardiac catheterization and possible PCI — City Medical Center does not have cath lab capabilities.",
+    "indexDischargePlan": "Transfer to University Medical Center for cardiac catheterization. Transfer summary sent.",
+    "readmitClaimId": "RDM-015",
+    "readmitProviderId": "PRV-005",
+    "readmitProviderName": "University Medical Center",
+    "readmitAdmissionDate": "2025-12-18",
+    "readmitDischargeDate": "2025-12-22",
+    "readmitAdmissionType": "Urgent",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 4,
+    "readmitAttendingPhysicianName": "Dr. Robert Kim",
+    "readmitAttendingSpecialty": "Cardiology",
+    "readmitDRG": "247",
+    "readmitDRGDescription": "Perc Cardiovasc Proc w Drug-Eluting Stent w MCC",
+    "readmitBilledAmount": 21650,
+    "readmitPrimaryDiagnosis": {
+      "code": "I21.09",
+      "description": "ST elevation myocardial infarction involving other coronary artery of anterior wall",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "I50.9",
+        "description": "Heart failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "readmitClinicalNotes": "67-year-old female transferred from City Medical Center for cardiac catheterization following anterior STEMI. PCI with drug-eluting stent to LAD. Successful revascularization. This is a continuation of care — transfer, not a true readmission. Both facilities billing for the same episode of care. Transfer DRG rules should apply.",
+    "daysBetween": 0,
+    "sameFacility": false,
+    "sameAttending": false,
+    "combinedBilledAmount": 32551,
+    "hrrpTargetCondition": "AMI",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Bundle Candidate",
+    "riskScore": 62,
+    "clinicalRelatedness": "Definitely Related",
+    "preventabilityScore": 55,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-001",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission has the same principal diagnosis category as the index admission (I21.09 -> I21.09: ST elevation myocardial infarction involving other coronary artery of anterior wall). This strongly suggests the readmission is clinically related to the index stay and may represent incomplete treatment or disease recurrence.",
+        "recommendation": "Review index discharge to assess whether treatment was adequate. Evaluate if the readmission could have been prevented with more aggressive treatment, closer follow-up, or extended index stay.",
+        "financialImpact": -21650
+      },
+      {
+        "ruleId": "RULE-RA-TP-001",
+        "category": "TIMING_PATTERN",
+        "severity": "Critical",
+        "description": "Same-day transfer between facilities. The index admission shows transfer discharge status and the readmission occurs on the same date at a different facility. Per CMS transfer rules, the transferring hospital receives a per diem payment and the receiving hospital bills the full DRG. Both facilities should not be billing full DRG rates.",
+        "recommendation": "Apply CMS transfer DRG pricing rules. The transferring facility should receive a per diem rate (not the full DRG). Verify transfer agreement documentation. Flag for payment adjustment.",
+        "financialImpact": -6540.599999999999
+      },
+      {
+        "ruleId": "RULE-RA-DOC-001",
+        "category": "DOCUMENTATION_GAP",
+        "severity": "Medium",
+        "description": "Index admission has a missing or inadequate discharge plan. Comprehensive discharge planning is a key element of readmission prevention. Without documented follow-up arrangements, medication reconciliation, and patient education, readmission risk is significantly elevated.",
+        "recommendation": "Require comprehensive discharge summary with: follow-up appointments, medication list with changes highlighted, warning signs education, and contact information for questions. Implement discharge planning checklist.",
+        "financialImpact": -4330
+      }
+    ],
+    "agentSummary": "3 findings identified (1 critical). Readmission 0 days after discharge is a strong bundle candidate. Estimated savings if bundled: $21,650. Clinical relatedness: Definitely Related.",
+    "agentConfidence": 70,
+    "bundleSavings": 21650,
+    "hrrpPenaltyRisk": 85,
+    "reviewedAt": "2026-02-19T18:14:54.437Z"
+  },
+  {
+    "id": "RA-016",
+    "indexClaimId": "IDX-016",
+    "indexProviderId": "PRV-003",
+    "indexProviderName": "St. Mary's Regional",
+    "indexBeneficiaryId": "BEN-1020",
+    "indexBeneficiaryName": "Charles Garcia",
+    "indexAdmissionDate": "2026-01-02",
+    "indexDischargeDate": "2026-01-04",
+    "indexAdmissionType": "Emergency",
+    "indexDischargeStatus": "Home",
+    "indexLengthOfStay": 2,
+    "indexAttendingPhysicianName": "Dr. James Wright",
+    "indexAttendingSpecialty": "Internal Medicine",
+    "indexDRG": "292",
+    "indexDRGDescription": "Heart Failure & Shock w CC",
+    "indexBilledAmount": 6860,
+    "indexPrimaryDiagnosis": {
+      "code": "I50.33",
+      "description": "Acute on chronic diastolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "indexSecondaryDiagnoses": [
+      {
+        "code": "I48.91",
+        "description": "Unspecified atrial fibrillation",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "indexClinicalNotes": "77-year-old male with third CHF admission in 2 months. Mild exacerbation. Brief stay with minimal diuresis. Discharged without medication optimization. No social work consult or disease management referral despite recurrent admissions.",
+    "indexDischargePlan": "Home. Continue current medications. Follow-up with PCP.",
+    "readmitClaimId": "RDM-016",
+    "readmitProviderId": "PRV-003",
+    "readmitProviderName": "St. Mary's Regional",
+    "readmitAdmissionDate": "2026-01-08",
+    "readmitDischargeDate": "2026-01-12",
+    "readmitAdmissionType": "Emergency",
+    "readmitDischargeStatus": "Home",
+    "readmitLengthOfStay": 4,
+    "readmitAttendingPhysicianName": "Dr. James Wright",
+    "readmitAttendingSpecialty": "Internal Medicine",
+    "readmitDRG": "291",
+    "readmitDRGDescription": "Heart Failure & Shock w MCC",
+    "readmitBilledAmount": 14100,
+    "readmitPrimaryDiagnosis": {
+      "code": "I50.33",
+      "description": "Acute on chronic diastolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "readmitSecondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "I48.91",
+        "description": "Unspecified atrial fibrillation",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "readmitClinicalNotes": "77-year-old male readmitted 4 days post-discharge with severe CHF exacerbation with respiratory failure. This is the FOURTH CHF admission in 2 months. Revolving door pattern. No evidence of medication optimization, disease management enrollment, or palliative care discussion across multiple admissions. Systemic quality concern.",
+    "daysBetween": 4,
+    "sameFacility": true,
+    "sameAttending": true,
+    "combinedBilledAmount": 20960,
+    "hrrpTargetCondition": "CHF",
+    "isPlannedReadmission": false,
+    "reviewStatus": "Potentially Preventable",
+    "riskScore": 62,
+    "clinicalRelatedness": "Likely Related",
+    "preventabilityScore": 55,
+    "readmissionFindings": [
+      {
+        "ruleId": "RULE-RA-CR-001",
+        "category": "CLINICAL_RELATEDNESS",
+        "severity": "High",
+        "description": "Readmission has the same principal diagnosis category as the index admission (I50.33 -> I50.33: Acute on chronic diastolic heart failure). This strongly suggests the readmission is clinically related to the index stay and may represent incomplete treatment or disease recurrence.",
+        "recommendation": "Review index discharge to assess whether treatment was adequate. Evaluate if the readmission could have been prevented with more aggressive treatment, closer follow-up, or extended index stay.",
+        "financialImpact": -14100
+      },
+      {
+        "ruleId": "RULE-RA-QC-001",
+        "category": "QUALITY_CONCERN",
+        "severity": "Critical",
+        "description": "Documentation indicates a pattern of recurrent admissions for the same condition without evidence of care escalation, medication optimization, disease management enrollment, or palliative care discussion. This revolving door pattern represents a systemic quality concern.",
+        "recommendation": "Mandatory case management review. Require documented evidence of medication optimization, specialist referral, disease management enrollment, and goals of care discussion before approving further admissions. Consider palliative care or hospice referral if appropriate.",
+        "financialImpact": -14100
+      },
+      {
+        "ruleId": "RULE-RA-DOC-001",
+        "category": "DOCUMENTATION_GAP",
+        "severity": "Medium",
+        "description": "Index admission has a missing or inadequate discharge plan. Comprehensive discharge planning is a key element of readmission prevention. Without documented follow-up arrangements, medication reconciliation, and patient education, readmission risk is significantly elevated.",
+        "recommendation": "Require comprehensive discharge summary with: follow-up appointments, medication list with changes highlighted, warning signs education, and contact information for questions. Implement discharge planning checklist.",
+        "financialImpact": -2820
+      }
+    ],
+    "agentSummary": "3 findings identified. Readmission was potentially preventable (preventability score: 55%). HRRP target condition: CHF. Clinical relatedness: Likely Related.",
+    "agentConfidence": 70,
+    "bundleSavings": 7050,
+    "hrrpPenaltyRisk": 85,
+    "reviewedAt": "2026-02-19T18:14:54.638Z"
+  }
+]

@@ -1,0 +1,1349 @@
+[
+  {
+    "id": "DRG-001",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1001",
+    "beneficiaryName": "Margaret Johnson",
+    "admissionDate": "2026-01-05",
+    "dischargeDate": "2026-01-12",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 7,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "690",
+    "assignedDRGDescription": "Kidney & Urinary Tract Infections w/o MCC",
+    "assignedDRGWeight": 0.9284,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 5756,
+    "primaryDiagnosis": {
+      "code": "N39.0",
+      "description": "Urinary tract infection, site not specified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "R65.20",
+        "description": "Severe sepsis without septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "78-year-old female admitted with fever 102.4F, WBC 18.2, lactic acid 3.1 mmol/L, positive UA and urine culture E. coli. Met 2/4 SIRS criteria on admission. Blood cultures positive for gram-negative bacteremia. Required IV antibiotics and fluid resuscitation. Clinical presentation consistent with urosepsis. Responded to broad-spectrum antibiotics over 5-day course.",
+    "validationStatus": "Queried",
+    "riskScore": 40,
+    "expectedDRG": "871",
+    "expectedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "expectedDRGWeight": 2.8871,
+    "expectedReimbursement": 17900,
+    "financialVariance": 12144,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-SEP-001",
+        "category": "CODING_SEQUENCE",
+        "severity": "Critical",
+        "description": "Clinical notes reference sepsis/SIRS criteria but principal diagnosis is \"Urinary tract infection, site not specified\" (N39.0). Per ICD-10 and Coding Clinic guidelines, when sepsis is present with a localized infection, sepsis (A41.x) should be sequenced as the principal diagnosis.",
+        "recommendation": "Query attending physician to confirm sepsis as reason for admission. If confirmed, recode A41.9 as principal diagnosis and move current principal to secondary. Add R65.20 (severe sepsis) if organ dysfunction criteria met.",
+        "financialImpact": 3100
+      }
+    ],
+    "agentSummary": "1 validation finding identified (1 critical). Estimated financial variance: $3,100. Analysis indicates coding discrepancies requiring clinical review.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:47.993Z"
+  },
+  {
+    "id": "DRG-002",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1002",
+    "beneficiaryName": "Robert Williams",
+    "admissionDate": "2026-01-08",
+    "dischargeDate": "2026-01-14",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 6,
+    "attendingPhysicianNPI": "2345678901",
+    "attendingPhysicianName": "Dr. Michael Torres",
+    "attendingSpecialty": "Pulmonology",
+    "assignedDRG": "871",
+    "assignedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "assignedDRGWeight": 2.8871,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 17900,
+    "primaryDiagnosis": {
+      "code": "A41.9",
+      "description": "Sepsis, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N39.0",
+        "description": "Urinary tract infection",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E11.65",
+        "description": "Type 2 DM with hyperglycemia",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "72-year-old male admitted with UTI-source sepsis. Vitals on admission: BP 95/60, HR 110, Temp 101.8F, RR 22. WBC 16.4. Lactic acid 2.8 mmol/L. O2 saturation remained 96-98% on room air throughout stay. No supplemental oxygen required at any point. ABG on day 2: pH 7.38, pCO2 40, pO2 88 on room air. No intubation, no BiPAP, no high-flow nasal cannula. Patient was ambulatory by day 3. Respiratory failure code queried - patient maintained normal oxygenation throughout admission.",
+    "validationStatus": "Queried",
+    "riskScore": 26,
+    "expectedDRG": "872",
+    "expectedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w/o MCC",
+    "expectedDRGWeight": 1.4839,
+    "expectedReimbursement": 9200,
+    "financialVariance": -8700,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-SEP-002",
+        "category": "CC_MCC_VALIDATION",
+        "severity": "High",
+        "description": "Acute respiratory failure (J96.00) coded as MCC but clinical documentation does not support respiratory failure criteria. Patient maintained normal oxygenation without supplemental oxygen support.",
+        "recommendation": "Query physician regarding clinical basis for respiratory failure diagnosis. If not clinically supported, remove J96.00. This would change DRG from septicemia w MCC to septicemia w/o MCC.",
+        "financialImpact": -8700
+      }
+    ],
+    "agentSummary": "1 validation finding identified. Estimated financial variance: $8,700. Analysis indicates coding discrepancies requiring clinical review.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:48.197Z"
+  },
+  {
+    "id": "DRG-003",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1003",
+    "beneficiaryName": "Dorothy Adams",
+    "admissionDate": "2026-01-10",
+    "dischargeDate": "2026-01-18",
+    "admissionType": "Emergency",
+    "dischargeStatus": "SNF",
+    "lengthOfStay": 8,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "871",
+    "assignedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "assignedDRGWeight": 2.8871,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 17900,
+    "primaryDiagnosis": {
+      "code": "A41.9",
+      "description": "Sepsis, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "R65.20",
+        "description": "Severe sepsis without septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N17.9",
+        "description": "Acute kidney failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "J18.9",
+        "description": "Pneumonia, unspecified organism",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "81-year-old female admitted with severe sepsis secondary to pneumonia. WBC 22.1, lactic acid 4.2 mmol/L, creatinine 3.8 (baseline 1.1). Met severe sepsis criteria with organ dysfunction (AKI). Required vasopressor support for 18 hours. Blood cultures grew Streptococcus pneumoniae. Chest X-ray confirmed right lower lobe consolidation. Responded to IV meropenem. Renal function improved by day 5. Discharged to SNF for continued recovery.",
+    "validationStatus": "Downcoded",
+    "riskScore": 25,
+    "expectedDRG": "871",
+    "expectedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "expectedDRGWeight": 2.8871,
+    "expectedReimbursement": 17900,
+    "financialVariance": 0,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-SEP-003",
+        "category": "DOWNCODING",
+        "severity": "Critical",
+        "description": "Clinical notes document vasopressor use and hemodynamic instability consistent with septic shock, but R65.21 (septic shock) is not coded. Septic shock is an MCC that significantly impacts DRG assignment.",
+        "recommendation": "Query physician to confirm septic shock. If confirmed, add R65.21. This would upgrade DRG to septicemia with MCC, reflecting true clinical severity and resource utilization.",
+        "financialImpact": 8700
+      }
+    ],
+    "agentSummary": "1 validation finding identified (1 critical). Estimated financial variance: $8,700. Analysis indicates missed revenue opportunity — physician query recommended for potential DRG upgrade.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:48.398Z"
+  },
+  {
+    "id": "DRG-004",
+    "providerId": "PRV-003",
+    "providerName": "St. Mary's Regional Medical Center",
+    "beneficiaryId": "BEN-1004",
+    "beneficiaryName": "James Mitchell",
+    "admissionDate": "2026-01-12",
+    "dischargeDate": "2026-01-20",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 8,
+    "attendingPhysicianNPI": "3456789012",
+    "attendingPhysicianName": "Dr. Lisa Park",
+    "attendingSpecialty": "Critical Care",
+    "assignedDRG": "872",
+    "assignedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w/o MCC",
+    "assignedDRGWeight": 1.4839,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 9200,
+    "primaryDiagnosis": {
+      "code": "A41.9",
+      "description": "Sepsis, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "J18.9",
+        "description": "Pneumonia, unspecified organism",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "69-year-old male admitted with pneumonia-source sepsis. On arrival: BP 72/40, HR 128, Temp 103.1F, lactic acid 5.8 mmol/L. Required norepinephrine drip for 36 hours to maintain MAP >65. ICU admission for septic shock management. Blood cultures positive for Klebsiella pneumoniae. Developed acute kidney injury (creatinine peaked 2.9, baseline 0.9). Required 4L crystalloid resuscitation in first 6 hours. Vasopressors weaned by day 3. Transferred to floor day 4.",
+    "validationStatus": "Downcoded",
+    "riskScore": 44,
+    "expectedDRG": "871",
+    "expectedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "expectedDRGWeight": 2.8871,
+    "expectedReimbursement": 17900,
+    "financialVariance": 8700,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-SEP-003",
+        "category": "DOWNCODING",
+        "severity": "Critical",
+        "description": "Clinical notes document vasopressor use and hemodynamic instability consistent with septic shock, but R65.21 (septic shock) is not coded. Septic shock is an MCC that significantly impacts DRG assignment.",
+        "recommendation": "Query physician to confirm septic shock. If confirmed, add R65.21. This would upgrade DRG to septicemia with MCC, reflecting true clinical severity and resource utilization.",
+        "financialImpact": 8700
+      },
+      {
+        "ruleId": "RULE-CARD-003",
+        "category": "DOWNCODING",
+        "severity": "Medium",
+        "description": "Acute kidney injury documented in clinical notes with supporting lab values (creatinine changes) but N17.x (AKI) is not coded. AKI qualifies as a CC.",
+        "recommendation": "Add N17.9 (AKI, unspecified) or stage-specific code based on KDIGO criteria from labs. This CC may impact DRG assignment.",
+        "financialImpact": 2700
+      }
+    ],
+    "agentSummary": "2 validation findings identified (1 critical). Estimated financial variance: $11,400. Analysis indicates missed revenue opportunity — physician query recommended for potential DRG upgrade.",
+    "agentConfidence": 76,
+    "reviewedAt": "2026-02-19T20:03:48.599Z"
+  },
+  {
+    "id": "DRG-005",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1005",
+    "beneficiaryName": "Patricia Brown",
+    "admissionDate": "2026-01-15",
+    "dischargeDate": "2026-01-21",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 6,
+    "attendingPhysicianNPI": "2345678901",
+    "attendingPhysicianName": "Dr. Michael Torres",
+    "attendingSpecialty": "Pulmonology",
+    "assignedDRG": "193",
+    "assignedDRGDescription": "Simple Pneumonia & Pleurisy w MCC",
+    "assignedDRGWeight": 1.7984,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 11150,
+    "primaryDiagnosis": {
+      "code": "J18.9",
+      "description": "Pneumonia, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "A41.9",
+        "description": "Sepsis, unspecified organism",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "R65.20",
+        "description": "Severe sepsis without septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N17.9",
+        "description": "Acute kidney failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "74-year-old female admitted with community-acquired pneumonia progressing to sepsis. WBC 19.8, lactic acid 3.4 mmol/L, creatinine 2.6 (baseline 1.0). Blood cultures positive. Met severe sepsis criteria with organ dysfunction (AKI). Per ICD-10 guidelines, when sepsis is present with a localized infection, sepsis should be sequenced as the principal diagnosis. Coding Clinic guidance indicates A41.9 should be listed first when sepsis meets principal diagnosis criteria.",
+    "validationStatus": "Queried",
+    "riskScore": 48,
+    "expectedDRG": "871",
+    "expectedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "expectedDRGWeight": 2.8871,
+    "expectedReimbursement": 17900,
+    "financialVariance": 6750,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-SEP-001",
+        "category": "CODING_SEQUENCE",
+        "severity": "Critical",
+        "description": "Clinical notes reference sepsis/SIRS criteria but principal diagnosis is \"Pneumonia, unspecified organism\" (J18.9). Per ICD-10 and Coding Clinic guidelines, when sepsis is present with a localized infection, sepsis (A41.x) should be sequenced as the principal diagnosis.",
+        "recommendation": "Query attending physician to confirm sepsis as reason for admission. If confirmed, recode A41.9 as principal diagnosis and move current principal to secondary. Add R65.20 (severe sepsis) if organ dysfunction criteria met.",
+        "financialImpact": 3100
+      },
+      {
+        "ruleId": "RULE-SEP-004",
+        "category": "CODING_SEQUENCE",
+        "severity": "High",
+        "description": "Sepsis (A41.x) and severe sepsis (R65.20) are coded as secondary diagnoses but per ICD-10 sequencing guidelines, sepsis should be the principal diagnosis when it meets the definition of \"condition established after study.\"",
+        "recommendation": "Resequence A41.x as principal diagnosis. Move current principal to secondary position. This may change the MS-DRG assignment.",
+        "financialImpact": 1800
+      }
+    ],
+    "agentSummary": "2 validation findings identified (1 critical). Estimated financial variance: $4,900. Analysis indicates coding discrepancies requiring clinical review.",
+    "agentConfidence": 76,
+    "reviewedAt": "2026-02-19T20:03:48.800Z"
+  },
+  {
+    "id": "DRG-006",
+    "providerId": "PRV-004",
+    "providerName": "Heart & Vascular Institute",
+    "beneficiaryId": "BEN-1006",
+    "beneficiaryName": "William Davis",
+    "admissionDate": "2026-01-18",
+    "dischargeDate": "2026-01-22",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 4,
+    "attendingPhysicianNPI": "4567890123",
+    "attendingPhysicianName": "Dr. James Kumar",
+    "attendingSpecialty": "Cardiology",
+    "assignedDRG": "282",
+    "assignedDRGDescription": "Acute Myocardial Infarction, Discharged Alive w/o CC/MCC",
+    "assignedDRGWeight": 1.0758,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 6670,
+    "primaryDiagnosis": {
+      "code": "I21.09",
+      "description": "ST elevation myocardial infarction involving other coronary artery of anterior wall",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I25.10",
+        "description": "Atherosclerotic heart disease of native coronary artery",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E78.5",
+        "description": "Hyperlipidemia, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "62-year-old male presented with acute STEMI. Troponin I elevated at 12.4 ng/mL. ECG showed ST elevation in leads V1-V4. Taken emergently to cath lab - 90% LAD occlusion, successfully treated with drug-eluting stent placement. Post-PCI course uncomplicated. Echocardiogram showed EF 50%. Started on dual antiplatelet therapy, high-dose statin, beta-blocker, and ACE inhibitor. Discharged in stable condition.",
+    "validationStatus": "Validated",
+    "riskScore": 0,
+    "expectedDRG": "282",
+    "expectedDRGDescription": "Acute Myocardial Infarction, Discharged Alive w/o CC/MCC",
+    "expectedDRGWeight": 1.0758,
+    "expectedReimbursement": 6670,
+    "financialVariance": 0,
+    "agentFindings": [],
+    "agentSummary": "DRG 282 (Acute Myocardial Infarction, Discharged Alive w/o CC/MCC) is clinically supported by the documentation. No validation issues identified.",
+    "agentConfidence": 95,
+    "reviewedAt": "2026-02-19T20:03:49.003Z"
+  },
+  {
+    "id": "DRG-007",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1007",
+    "beneficiaryName": "Helen Martinez",
+    "admissionDate": "2026-01-20",
+    "dischargeDate": "2026-01-26",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 6,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "293",
+    "assignedDRGDescription": "Heart Failure & Shock w/o CC/MCC",
+    "assignedDRGWeight": 0.7145,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 4430,
+    "primaryDiagnosis": {
+      "code": "I50.9",
+      "description": "Heart failure, unspecified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "76-year-old female admitted with acute decompensated heart failure. BNP 1840 pg/mL. Chest X-ray showed bilateral pleural effusions and pulmonary edema. Echocardiogram demonstrated EF 25% (previous EF 40% six months ago), severe diastolic dysfunction grade III, acute-on-chronic combined systolic and diastolic heart failure (I50.33 would be more specific code). Required IV furosemide drip, transitioned to oral diuretics. Lost 8 lbs of fluid weight. Also has chronic kidney disease stage 3 (eGFR 38) which was not coded - CKD3 (N18.3) qualifies as CC.",
+    "validationStatus": "Downcoded",
+    "riskScore": 27,
+    "expectedDRG": "291",
+    "expectedDRGDescription": "Heart Failure & Shock w MCC",
+    "expectedDRGWeight": 2.2742,
+    "expectedReimbursement": 14100,
+    "financialVariance": 9670,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-CARD-001",
+        "category": "DOWNCODING",
+        "severity": "High",
+        "description": "Documentation indicates acute-on-chronic heart failure but I50.9 (unspecified) was coded. A more specific code (e.g., I50.33 for acute-on-chronic combined HF) may qualify as higher severity. Chronic kidney disease documented in notes (eGFR values present) but not coded. CKD stage 3+ (N18.3+) qualifies as CC.",
+        "recommendation": "Query physician for specific heart failure type and CKD staging. Code to highest specificity supported by documentation. Missing CCs/MCCs may upgrade DRG from HF w/o CC/MCC to HF w CC or w MCC.",
+        "financialImpact": 7900
+      }
+    ],
+    "agentSummary": "1 validation finding identified. Estimated financial variance: $7,900. Analysis indicates missed revenue opportunity — physician query recommended for potential DRG upgrade.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:49.204Z"
+  },
+  {
+    "id": "DRG-008",
+    "providerId": "PRV-004",
+    "providerName": "Heart & Vascular Institute",
+    "beneficiaryId": "BEN-1008",
+    "beneficiaryName": "Charles Wilson",
+    "admissionDate": "2026-01-22",
+    "dischargeDate": "2026-01-25",
+    "admissionType": "Urgent",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 3,
+    "attendingPhysicianNPI": "4567890123",
+    "attendingPhysicianName": "Dr. James Kumar",
+    "attendingSpecialty": "Cardiology",
+    "assignedDRG": "309",
+    "assignedDRGDescription": "Cardiac Arrhythmia & Conduction Disorders w CC",
+    "assignedDRGWeight": 0.9194,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 5700,
+    "primaryDiagnosis": {
+      "code": "I48.91",
+      "description": "Unspecified atrial fibrillation",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E78.5",
+        "description": "Hyperlipidemia, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "68-year-old male admitted with new-onset atrial fibrillation with rapid ventricular response. HR 142 on arrival. Started on diltiazem drip, rate controlled within 4 hours. Transitioned to oral metoprolol. TEE performed - no left atrial thrombus. Started on apixaban for anticoagulation. HbA1c 7.2%, diabetes management optimized. Echocardiogram showed EF 55%, mild LVH. Discharged in controlled atrial fibrillation.",
+    "validationStatus": "Validated",
+    "riskScore": 0,
+    "expectedDRG": "309",
+    "expectedDRGDescription": "Cardiac Arrhythmia & Conduction Disorders w CC",
+    "expectedDRGWeight": 0.9194,
+    "expectedReimbursement": 5700,
+    "financialVariance": 0,
+    "agentFindings": [],
+    "agentSummary": "DRG 309 (Cardiac Arrhythmia & Conduction Disorders w CC) is clinically supported by the documentation. No validation issues identified.",
+    "agentConfidence": 95,
+    "reviewedAt": "2026-02-19T20:03:49.404Z"
+  },
+  {
+    "id": "DRG-009",
+    "providerId": "PRV-004",
+    "providerName": "Heart & Vascular Institute",
+    "beneficiaryId": "BEN-1009",
+    "beneficiaryName": "Richard Thompson",
+    "admissionDate": "2026-01-25",
+    "dischargeDate": "2026-01-28",
+    "admissionType": "Elective",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 3,
+    "attendingPhysicianNPI": "5678901234",
+    "attendingPhysicianName": "Dr. Priya Patel",
+    "attendingSpecialty": "Interventional Cardiology",
+    "assignedDRG": "247",
+    "assignedDRGDescription": "Percutaneous Cardiovascular Proc w Drug-Eluting Stent w MCC",
+    "assignedDRGWeight": 3.4919,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 21650,
+    "primaryDiagnosis": {
+      "code": "I25.10",
+      "description": "Atherosclerotic heart disease of native coronary artery",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I21.09",
+        "description": "STEMI involving anterior wall",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "E11.65",
+        "description": "Type 2 DM with hyperglycemia",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "71-year-old male admitted for elective cardiac catheterization to evaluate chest pain on exertion. Diagnostic left heart catheterization performed: found 60% stenosis in LAD, 40% stenosis in RCA. Lesions determined to be non-obstructive and NOT amenable to intervention. No stent placed. No percutaneous coronary intervention performed. Patient managed medically with optimization of antianginal therapy. Stress test showed mild reversible ischemia. Decision made for continued medical management. No interventional procedure was performed during this admission.",
+    "validationStatus": "Upcoded",
+    "riskScore": 44,
+    "expectedDRG": "282",
+    "expectedDRGDescription": "Acute Myocardial Infarction, Discharged Alive w/o CC/MCC",
+    "expectedDRGWeight": 1.0758,
+    "expectedReimbursement": 6670,
+    "financialVariance": -14980,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-CARD-002",
+        "category": "UPCODING",
+        "severity": "Critical",
+        "description": "DRG assigned for percutaneous cardiovascular procedure with stent, but documentation indicates only diagnostic catheterization was performed. No interventional procedure or stent placement documented.",
+        "recommendation": "Recode to diagnostic cardiac catheterization DRG. Remove PCI procedure codes. This is a significant DRG discrepancy requiring immediate correction.",
+        "financialImpact": -15250
+      }
+    ],
+    "agentSummary": "1 validation finding identified (1 critical). Estimated financial variance: $15,250. Analysis indicates potential overbilling requiring downward DRG adjustment.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:49.608Z"
+  },
+  {
+    "id": "DRG-010",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1010",
+    "beneficiaryName": "Barbara Anderson",
+    "admissionDate": "2026-01-28",
+    "dischargeDate": "2026-02-01",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 4,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "304",
+    "assignedDRGDescription": "Hypertension w/o MCC",
+    "assignedDRGWeight": 0.6542,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 4056,
+    "primaryDiagnosis": {
+      "code": "I16.0",
+      "description": "Hypertensive urgency",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "70-year-old female presented with BP 218/120, headache, and blurred vision. Admitted for IV nicardipine drip. Creatinine on admission 2.4 (baseline 1.0), rising to 3.1 on day 2 before improving with BP control. AKI Stage 2 per KDIGO criteria secondary to hypertensive nephropathy. Urine output adequate throughout. BUN 42. eGFR dropped to 22. Renal function improving at discharge (creatinine 1.6). AKI (N17.9) qualifies as CC and should be captured.",
+    "validationStatus": "Downcoded",
+    "riskScore": 8,
+    "expectedDRG": "304",
+    "expectedDRGDescription": "Hypertension w/o MCC",
+    "expectedDRGWeight": 0.6542,
+    "expectedReimbursement": 4056,
+    "financialVariance": 0,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-CARD-003",
+        "category": "DOWNCODING",
+        "severity": "Medium",
+        "description": "Acute kidney injury documented in clinical notes with supporting lab values (creatinine changes) but N17.x (AKI) is not coded. AKI qualifies as a CC.",
+        "recommendation": "Add N17.9 (AKI, unspecified) or stage-specific code based on KDIGO criteria from labs. This CC may impact DRG assignment.",
+        "financialImpact": 2700
+      }
+    ],
+    "agentSummary": "1 validation finding identified. Estimated financial variance: $2,700. Analysis indicates missed revenue opportunity — physician query recommended for potential DRG upgrade.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:49.811Z"
+  },
+  {
+    "id": "DRG-011",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1011",
+    "beneficiaryName": "Thomas Garcia",
+    "admissionDate": "2026-02-01",
+    "dischargeDate": "2026-02-07",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 6,
+    "attendingPhysicianNPI": "2345678901",
+    "attendingPhysicianName": "Dr. Michael Torres",
+    "attendingSpecialty": "Pulmonology",
+    "assignedDRG": "190",
+    "assignedDRGDescription": "Chronic Obstructive Pulmonary Disease w MCC",
+    "assignedDRGWeight": 1.522,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 9436,
+    "primaryDiagnosis": {
+      "code": "J44.1",
+      "description": "Chronic obstructive pulmonary disease with acute exacerbation",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "67-year-old male admitted with severe COPD exacerbation and acute hypoxic respiratory failure. O2 sat 82% on room air, required BiPAP for 48 hours. ABG: pH 7.31, pCO2 58, pO2 52 on 2L NC. Chest X-ray showed hyperinflation with no infiltrate. Treated with systemic steroids, nebulizers, and IV antibiotics. Weaned off BiPAP to 3L NC by day 3. Discharged on home oxygen 2L. Respiratory failure clinically supported by hypoxemia and need for mechanical ventilatory support.",
+    "validationStatus": "Validated",
+    "riskScore": 0,
+    "expectedDRG": "190",
+    "expectedDRGDescription": "Chronic Obstructive Pulmonary Disease w MCC",
+    "expectedDRGWeight": 1.522,
+    "expectedReimbursement": 9436,
+    "financialVariance": 0,
+    "agentFindings": [],
+    "agentSummary": "DRG 190 (Chronic Obstructive Pulmonary Disease w MCC) is clinically supported by the documentation. No validation issues identified.",
+    "agentConfidence": 95,
+    "reviewedAt": "2026-02-19T20:03:50.013Z"
+  },
+  {
+    "id": "DRG-012",
+    "providerId": "PRV-003",
+    "providerName": "St. Mary's Regional Medical Center",
+    "beneficiaryId": "BEN-1012",
+    "beneficiaryName": "Susan Clark",
+    "admissionDate": "2026-02-03",
+    "dischargeDate": "2026-02-18",
+    "admissionType": "Emergency",
+    "dischargeStatus": "LTAC",
+    "lengthOfStay": 15,
+    "attendingPhysicianNPI": "3456789012",
+    "attendingPhysicianName": "Dr. Lisa Park",
+    "attendingSpecialty": "Critical Care",
+    "assignedDRG": "194",
+    "assignedDRGDescription": "Simple Pneumonia & Pleurisy w CC",
+    "assignedDRGWeight": 1.0274,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 6370,
+    "primaryDiagnosis": {
+      "code": "J18.9",
+      "description": "Pneumonia, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "73-year-old female admitted with bilateral pneumonia progressing to ARDS. Intubated on day 2 for worsening hypoxemia (P/F ratio 85). Required mechanical ventilation for 8 days (192 hours). Ventilator settings: PEEP 14, FiO2 60-80%. Developed ventilator-associated complications. Tracheostomy performed on day 10. Total mechanical ventilation time: 192 hours (>96 hours). Weaned to trach collar by day 13. Transferred to LTAC for continued ventilator weaning. Respiratory failure (J96.00) and prolonged mechanical ventilation should be coded.",
+    "validationStatus": "Downcoded",
+    "riskScore": 75,
+    "expectedDRG": "207",
+    "expectedDRGDescription": "Resp System Diagnosis w Ventilator Support >96 Hours",
+    "expectedDRGWeight": 8.5161,
+    "expectedReimbursement": 52800,
+    "financialVariance": 46430,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-RESP-001",
+        "category": "DOWNCODING",
+        "severity": "Critical",
+        "description": "Documentation indicates 192 hours of mechanical ventilation (>96 hours threshold) but claim is assigned DRG 194 (Simple Pneumonia & Pleurisy w CC). Should be grouped to DRG 207 (Respiratory System Diagnosis w Ventilator Support >96 Hours).",
+        "recommendation": "Verify ventilator start and stop times in respiratory therapy notes. If >96 hours confirmed, add procedure code 5A1955Z and recode to DRG 207. This is a high-value DRG change.",
+        "financialImpact": 43900
+      }
+    ],
+    "agentSummary": "1 validation finding identified (1 critical). Estimated financial variance: $43,900. Analysis indicates missed revenue opportunity — physician query recommended for potential DRG upgrade.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:50.214Z"
+  },
+  {
+    "id": "DRG-013",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1013",
+    "beneficiaryName": "Daniel Lee",
+    "admissionDate": "2026-02-05",
+    "dischargeDate": "2026-02-10",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 5,
+    "attendingPhysicianNPI": "2345678901",
+    "attendingPhysicianName": "Dr. Michael Torres",
+    "attendingSpecialty": "Pulmonology",
+    "assignedDRG": "175",
+    "assignedDRGDescription": "Pulmonary Embolism w MCC",
+    "assignedDRGWeight": 1.7581,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 10900,
+    "primaryDiagnosis": {
+      "code": "I26.09",
+      "description": "Other pulmonary embolism with acute cor pulmonale",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I26.99",
+        "description": "Other pulmonary embolism without acute cor pulmonale",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "58-year-old male admitted with acute PE confirmed on CT angiography. Bilateral subsegmental pulmonary emboli. Troponin mildly elevated at 0.08 ng/mL (normal <0.04). BNP 180 pg/mL. Echocardiogram performed: RV size normal, RV function normal, no RV strain, TAPSE 22mm (normal >16mm), no RV dilation. O2 sat 93% on 2L NC, improved to 97% on room air by day 2. No hemodynamic instability. Started on therapeutic anticoagulation with heparin bridged to apixaban. Stable throughout admission. Echo does NOT confirm acute cor pulmonale or RV strain.",
+    "validationStatus": "Upcoded",
+    "riskScore": 20,
+    "expectedDRG": "176",
+    "expectedDRGDescription": "Pulmonary Embolism w/o MCC",
+    "expectedDRGWeight": 1.0806,
+    "expectedReimbursement": 6700,
+    "financialVariance": -4200,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-RESP-002",
+        "category": "UPCODING",
+        "severity": "High",
+        "description": "PE coded as I26.09 (with acute cor pulmonale) but echocardiogram documents normal RV size and function with no RV strain. The \"with acute cor pulmonale\" code is not clinically supported.",
+        "recommendation": "Recode to I26.99 (PE without acute cor pulmonale). Remove associated respiratory failure MCC if also unsupported. This may change DRG from PE w MCC to PE w/o MCC.",
+        "financialImpact": -6600
+      }
+    ],
+    "agentSummary": "1 validation finding identified. Estimated financial variance: $6,600. Analysis indicates potential overbilling requiring downward DRG adjustment.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:50.416Z"
+  },
+  {
+    "id": "DRG-014",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1014",
+    "beneficiaryName": "Jennifer White",
+    "admissionDate": "2026-02-07",
+    "dischargeDate": "2026-02-10",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 3,
+    "attendingPhysicianNPI": "6789012345",
+    "attendingPhysicianName": "Dr. Amy Rodriguez",
+    "attendingSpecialty": "Pulmonology",
+    "assignedDRG": "202",
+    "assignedDRGDescription": "Bronchitis & Asthma w CC/MCC",
+    "assignedDRGWeight": 1.029,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 6380,
+    "primaryDiagnosis": {
+      "code": "J46",
+      "description": "Status asthmaticus",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "42-year-old female admitted with acute asthma exacerbation. Presented with wheezing, dyspnea, O2 sat 94% on room air. Peak flow 65% predicted on arrival, improved to 80% within 2 hours of nebulizer treatments. PaCO2 36 mmHg (normal), pH 7.42. No intubation required, no ICU admission. Responded well to IV methylprednisolone and continuous albuterol nebs. Weaned to oral prednisone by day 2. Does NOT meet status asthmaticus criteria: no refractory bronchospasm, no respiratory acidosis, no need for mechanical ventilation. Acute severe asthma (J45.41) would be more appropriate code.",
+    "validationStatus": "Upcoded",
+    "riskScore": 18,
+    "expectedDRG": "203",
+    "expectedDRGDescription": "Bronchitis & Asthma w/o CC/MCC",
+    "expectedDRGWeight": 0.6855,
+    "expectedReimbursement": 4250,
+    "financialVariance": -2130,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-RESP-003",
+        "category": "UPCODING",
+        "severity": "High",
+        "description": "Status asthmaticus (J46) coded but documentation does not demonstrate refractory bronchospasm, respiratory failure, or need for intubation. Patient responded to standard bronchodilator therapy.",
+        "recommendation": "Recode to J45.41 (moderate persistent asthma with acute exacerbation) or J45.51 (severe persistent asthma with acute exacerbation). Status asthmaticus requires documentation of life-threatening bronchospasm not responding to standard therapy.",
+        "financialImpact": -4400
+      }
+    ],
+    "agentSummary": "1 validation finding identified. Estimated financial variance: $4,400. Analysis indicates potential overbilling requiring downward DRG adjustment.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:50.618Z"
+  },
+  {
+    "id": "DRG-015",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1015",
+    "beneficiaryName": "David Robinson",
+    "admissionDate": "2026-02-09",
+    "dischargeDate": "2026-02-13",
+    "admissionType": "Urgent",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 4,
+    "attendingPhysicianNPI": "2345678901",
+    "attendingPhysicianName": "Dr. Michael Torres",
+    "attendingSpecialty": "Pulmonology",
+    "assignedDRG": "199",
+    "assignedDRGDescription": "Pneumothorax & Pleural Effusion w CC",
+    "assignedDRGWeight": 1.0613,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 6580,
+    "primaryDiagnosis": {
+      "code": "J91.8",
+      "description": "Pleural effusion in other conditions classified elsewhere",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I50.9",
+        "description": "Heart failure, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "71-year-old male admitted with large left-sided pleural effusion secondary to CHF exacerbation. Thoracentesis performed - 1.5L transudative fluid removed. BNP elevated at 980 pg/mL. Chest X-ray post-procedure showed significant improvement. Diuretics optimized. Echocardiogram stable from prior with EF 45%. Discharged on adjusted diuretic regimen with pulmonology follow-up.",
+    "validationStatus": "Validated",
+    "riskScore": 0,
+    "expectedDRG": "199",
+    "expectedDRGDescription": "Pneumothorax & Pleural Effusion w CC",
+    "expectedDRGWeight": 1.0613,
+    "expectedReimbursement": 6580,
+    "financialVariance": 0,
+    "agentFindings": [],
+    "agentSummary": "DRG 199 (Pneumothorax & Pleural Effusion w CC) is clinically supported by the documentation. No validation issues identified.",
+    "agentConfidence": 95,
+    "reviewedAt": "2026-02-19T20:03:50.818Z"
+  },
+  {
+    "id": "DRG-016",
+    "providerId": "PRV-005",
+    "providerName": "Neuroscience Center",
+    "beneficiaryId": "BEN-1016",
+    "beneficiaryName": "Mary Taylor",
+    "admissionDate": "2026-02-10",
+    "dischargeDate": "2026-02-17",
+    "admissionType": "Emergency",
+    "dischargeStatus": "SNF",
+    "lengthOfStay": 7,
+    "attendingPhysicianNPI": "7890123456",
+    "attendingPhysicianName": "Dr. Kevin Nguyen",
+    "attendingSpecialty": "Neurology",
+    "assignedDRG": "066",
+    "assignedDRGDescription": "Intracranial Hemorrhage or Cerebral Infarction w/o CC/MCC",
+    "assignedDRGWeight": 1.0968,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 6800,
+    "primaryDiagnosis": {
+      "code": "I63.9",
+      "description": "Cerebral infarction, unspecified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E78.5",
+        "description": "Hyperlipidemia, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "I48.91",
+        "description": "Unspecified atrial fibrillation",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "79-year-old female admitted with acute left MCA territory ischemic stroke. CT head showed early ischemic changes. tPA administered within window. NIHSS 14 on admission, improved to 8 by day 3. Developed right-sided hemiplegia (G81.91) affecting upper and lower extremities. Dysphagia requiring modified diet (R13.10). Physical therapy initiated - patient unable to ambulate independently. Speech therapy consulted for swallowing evaluation. Right hemiplegia (G81.91) is a CC that should be coded as it affects the DRG assignment and reflects true clinical complexity.",
+    "validationStatus": "Downcoded",
+    "riskScore": 21,
+    "expectedDRG": "062",
+    "expectedDRGDescription": "Intracranial Hemorrhage or Cerebral Infarction w CC",
+    "expectedDRGWeight": 1.8065,
+    "expectedReimbursement": 11200,
+    "financialVariance": 4400,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-GEN-001",
+        "category": "DOWNCODING",
+        "severity": "High",
+        "description": "Hemiplegia/hemiparesis documented following stroke but G81.x is not coded. Hemiplegia is a CC that impacts DRG assignment for cerebrovascular diagnoses.",
+        "recommendation": "Add appropriate G81.x code (G81.91 for right-sided, G81.92 for left-sided hemiplegia). Specify dominant vs non-dominant side if documented. This CC upgrades the stroke DRG.",
+        "financialImpact": 4400
+      }
+    ],
+    "agentSummary": "1 validation finding identified. Estimated financial variance: $4,400. Analysis indicates missed revenue opportunity — physician query recommended for potential DRG upgrade.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:51.020Z"
+  },
+  {
+    "id": "DRG-017",
+    "providerId": "PRV-003",
+    "providerName": "St. Mary's Regional Medical Center",
+    "beneficiaryId": "BEN-1017",
+    "beneficiaryName": "George Harris",
+    "admissionDate": "2026-02-12",
+    "dischargeDate": "2026-02-17",
+    "admissionType": "Emergency",
+    "dischargeStatus": "SNF",
+    "lengthOfStay": 5,
+    "attendingPhysicianNPI": "8901234567",
+    "attendingPhysicianName": "Dr. Robert Kim",
+    "attendingSpecialty": "Orthopedic Surgery",
+    "assignedDRG": "481",
+    "assignedDRGDescription": "Hip & Femur Procedures Except Major Joint w CC",
+    "assignedDRGWeight": 1.9823,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 12290,
+    "primaryDiagnosis": {
+      "code": "S72.001A",
+      "description": "Fracture of unspecified part of neck of right femur, initial encounter",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "W01.0XXA",
+        "description": "Fall on same level from slipping, initial encounter",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "M80.08XA",
+        "description": "Age-related osteoporosis with pathological fracture",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "84-year-old male admitted after mechanical fall at home with right hip fracture. X-ray confirmed displaced femoral neck fracture. Underwent ORIF with dynamic hip screw on day 1. Surgical procedure uncomplicated. Post-op course unremarkable - pain well controlled, no surgical site complications. Physical therapy initiated day 1 post-op. History of osteoporosis and type 2 diabetes. Cleared for discharge to SNF for rehabilitation.",
+    "validationStatus": "Validated",
+    "riskScore": 0,
+    "expectedDRG": "481",
+    "expectedDRGDescription": "Hip & Femur Procedures Except Major Joint w CC",
+    "expectedDRGWeight": 1.9823,
+    "expectedReimbursement": 12290,
+    "financialVariance": 0,
+    "agentFindings": [],
+    "agentSummary": "DRG 481 (Hip & Femur Procedures Except Major Joint w CC) is clinically supported by the documentation. No validation issues identified.",
+    "agentConfidence": 95,
+    "reviewedAt": "2026-02-19T20:03:51.222Z"
+  },
+  {
+    "id": "DRG-018",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1018",
+    "beneficiaryName": "Linda Jackson",
+    "admissionDate": "2026-02-13",
+    "dischargeDate": "2026-02-18",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 5,
+    "attendingPhysicianNPI": "9012345678",
+    "attendingPhysicianName": "Dr. Maria Santos",
+    "attendingSpecialty": "Nephrology",
+    "assignedDRG": "682",
+    "assignedDRGDescription": "Renal Failure w MCC",
+    "assignedDRGWeight": 1.8871,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 11700,
+    "primaryDiagnosis": {
+      "code": "N17.9",
+      "description": "Acute kidney failure, unspecified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "E87.1",
+        "description": "Hypo-osmolality and hyponatremia",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "E11.65",
+        "description": "Type 2 DM with hyperglycemia",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "66-year-old female admitted with acute kidney injury. Creatinine on admission 1.8 (baseline 1.0), peaked at 2.1 on day 2 before improving. AKI Stage 1 per KDIGO criteria (creatinine 1.5-1.9x baseline). No dialysis required. Urine output maintained >0.5 mL/kg/hr throughout. Sodium 131 on admission (mild hyponatremia), corrected to 136 with fluid restriction by day 2 - does not meet criteria for severe hyponatremia. No seizures, no altered mental status from hyponatremia. Renal function recovered to baseline by discharge. Lab values do not support MCC-level severity for either the AKI or the hyponatremia.",
+    "validationStatus": "Upcoded",
+    "riskScore": 21,
+    "expectedDRG": "683",
+    "expectedDRGDescription": "Renal Failure w CC",
+    "expectedDRGWeight": 1.129,
+    "expectedReimbursement": 7000,
+    "financialVariance": -4700,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-GEN-002",
+        "category": "UPCODING",
+        "severity": "High",
+        "description": "AKI coded as principal with MCC secondary diagnoses, but lab values indicate only Stage 1 AKI (mild). The MCC severity level is not supported by the clinical documentation.",
+        "recommendation": "Review MCC codes for clinical support. If hyponatremia or other MCC is mild and self-resolving, recode appropriately. DRG should reflect actual clinical severity.",
+        "financialImpact": -5500
+      }
+    ],
+    "agentSummary": "1 validation finding identified. Estimated financial variance: $5,500. Analysis indicates potential overbilling requiring downward DRG adjustment.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:51.425Z"
+  },
+  {
+    "id": "DRG-019",
+    "providerId": "PRV-003",
+    "providerName": "St. Mary's Regional Medical Center",
+    "beneficiaryId": "BEN-1019",
+    "beneficiaryName": "Robert Wright",
+    "admissionDate": "2026-02-14",
+    "dischargeDate": "2026-02-20",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 6,
+    "attendingPhysicianNPI": "0123456789",
+    "attendingPhysicianName": "Dr. John Franklin",
+    "attendingSpecialty": "Gastroenterology",
+    "assignedDRG": "378",
+    "assignedDRGDescription": "GI Hemorrhage w/o CC/MCC",
+    "assignedDRGWeight": 0.9516,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 5900,
+    "primaryDiagnosis": {
+      "code": "K92.1",
+      "description": "Melena",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "K25.4",
+        "description": "Chronic or unspecified gastric ulcer with hemorrhage",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "D62",
+        "description": "Acute posthemorrhagic anemia",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "72-year-old male admitted with melena and hemoglobin drop from 12.1 to 7.2. Required 4 units PRBC transfusion. EGD showed actively bleeding gastric ulcer, treated with epinephrine injection and bipolar cautery. INR on admission 4.8 (patient on warfarin), platelets 68K. Coagulopathy (D65 - disseminated intravascular coagulation) with INR >4 and thrombocytopenia contributing to hemorrhage severity. DIC workup: elevated D-dimer >10,000, low fibrinogen at 95, fragmented RBCs on smear. DIC qualifies as MCC but was not coded. Warfarin held, vitamin K administered, FFP given.",
+    "validationStatus": "Downcoded",
+    "riskScore": 34,
+    "expectedDRG": "376",
+    "expectedDRGDescription": "GI Hemorrhage w MCC",
+    "expectedDRGWeight": 2.1129,
+    "expectedReimbursement": 13100,
+    "financialVariance": 7200,
+    "agentFindings": [
+      {
+        "ruleId": "RULE-GEN-003",
+        "category": "DOWNCODING",
+        "severity": "Critical",
+        "description": "Clinical documentation supports disseminated intravascular coagulation (DIC) with elevated D-dimer, low fibrinogen, and coagulopathy, but D65 is not coded. DIC is an MCC that significantly impacts DRG weight.",
+        "recommendation": "Add D65 (DIC) based on documented lab findings. This MCC upgrades GI hemorrhage DRG from w/o CC/MCC to w MCC, reflecting the true clinical complexity.",
+        "financialImpact": 7200
+      }
+    ],
+    "agentSummary": "1 validation finding identified (1 critical). Estimated financial variance: $7,200. Analysis indicates missed revenue opportunity — physician query recommended for potential DRG upgrade.",
+    "agentConfidence": 83,
+    "reviewedAt": "2026-02-19T20:03:51.626Z"
+  },
+  {
+    "id": "DRG-020",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1020",
+    "beneficiaryName": "Karen Lewis",
+    "admissionDate": "2026-02-15",
+    "dischargeDate": "2026-02-19",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 4,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "603",
+    "assignedDRGDescription": "Cellulitis w/o MCC",
+    "assignedDRGWeight": 0.8871,
+    "msDRGBaseRate": 6200,
+    "billedAmount": 5500,
+    "primaryDiagnosis": {
+      "code": "L03.115",
+      "description": "Cellulitis of right lower limb",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "E11.621",
+        "description": "Type 2 DM with foot ulcer",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E78.5",
+        "description": "Hyperlipidemia, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "59-year-old female admitted with right lower extremity cellulitis surrounding a diabetic foot ulcer. Erythema, warmth, and swelling extending from foot to mid-calf. WBC 14.2. Blood cultures negative. Started on IV vancomycin and piperacillin-tazobactam. Wound care consulted for ulcer management. Diabetes with foot ulcer (E11.621) appropriately coded as CC. HbA1c 8.4% - endocrine follow-up recommended. Improved on IV antibiotics, transitioned to oral antibiotics for discharge.",
+    "validationStatus": "Validated",
+    "riskScore": 0,
+    "expectedDRG": "603",
+    "expectedDRGDescription": "Cellulitis w/o MCC",
+    "expectedDRGWeight": 0.8871,
+    "expectedReimbursement": 5500,
+    "financialVariance": 0,
+    "agentFindings": [],
+    "agentSummary": "DRG 603 (Cellulitis w/o MCC) is clinically supported by the documentation. No validation issues identified.",
+    "agentConfidence": 95,
+    "reviewedAt": "2026-02-19T20:03:51.827Z"
+  }
+]

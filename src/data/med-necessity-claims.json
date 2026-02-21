@@ -1,0 +1,2263 @@
+[
+  {
+    "id": "MN-001",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1001",
+    "beneficiaryName": "Margaret Johnson",
+    "admissionDate": "2026-01-05",
+    "dischargeDate": "2026-01-12",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 7,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "871",
+    "assignedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "billedAmount": 17900,
+    "primaryDiagnosis": {
+      "code": "A41.9",
+      "description": "Sepsis, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "R65.20",
+        "description": "Severe sepsis without septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N17.9",
+        "description": "Acute kidney failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N39.0",
+        "description": "Urinary tract infection",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "78-year-old female admitted via ED with severe sepsis secondary to UTI. Lactic acid 4.2 mmol/L, WBC 22.1, creatinine 3.8 (baseline 1.1). Required vasopressor support for 18 hours. IV antibiotics (meropenem), aggressive fluid resuscitation. AKI with organ dysfunction. Could not be managed outpatient given hemodynamic instability and organ failure.",
+    "admissionVitals": {
+      "bloodPressure": "82/48",
+      "heartRate": 118,
+      "temperature": 102.4,
+      "respiratoryRate": 26,
+      "o2Saturation": 91
+    },
+    "admissionLabValues": [
+      {
+        "name": "WBC",
+        "value": "22.1",
+        "unit": "K/uL",
+        "abnormal": true
+      },
+      {
+        "name": "Lactic Acid",
+        "value": "4.2",
+        "unit": "mmol/L",
+        "abnormal": true
+      },
+      {
+        "name": "Creatinine",
+        "value": "3.8",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "BUN",
+        "value": "48",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "Procalcitonin",
+        "value": "8.6",
+        "unit": "ng/mL",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "IV meropenem",
+      "IV normal saline bolus 3L",
+      "Norepinephrine drip",
+      "Foley catheter",
+      "Central line placement",
+      "Continuous telemetry"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": true,
+    "surgicalProcedure": false,
+    "telemetryRequired": true,
+    "oxygenRequired": true,
+    "isolationRequired": false,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 6,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Margaret Johnson presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 10,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:28.980Z"
+  },
+  {
+    "id": "MN-002",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1002",
+    "beneficiaryName": "Robert Williams",
+    "admissionDate": "2026-01-08",
+    "dischargeDate": "2026-01-10",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 2,
+    "attendingPhysicianNPI": "2345678901",
+    "attendingPhysicianName": "Dr. Michael Torres",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "690",
+    "assignedDRGDescription": "Kidney & Urinary Tract Infections w/o MCC",
+    "billedAmount": 5756,
+    "primaryDiagnosis": {
+      "code": "N39.0",
+      "description": "Urinary tract infection, site not specified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "65-year-old male presented to ED with dysuria and urinary frequency x 3 days. Afebrile. UA positive for nitrites and leukocyte esterase. Urine culture pending. Vitals stable throughout. Tolerating PO intake. Ambulatory. No signs of systemic infection. Received one dose IV antibiotic in ED then transitioned to oral ciprofloxacin. Could have been managed as outpatient with oral antibiotics.",
+    "admissionVitals": {
+      "bloodPressure": "138/82",
+      "heartRate": 78,
+      "temperature": 98.8,
+      "respiratoryRate": 16,
+      "o2Saturation": 98
+    },
+    "admissionLabValues": [
+      {
+        "name": "WBC",
+        "value": "11.2",
+        "unit": "K/uL",
+        "abnormal": true
+      },
+      {
+        "name": "Creatinine",
+        "value": "1.1",
+        "unit": "mg/dL",
+        "abnormal": false
+      },
+      {
+        "name": "Lactic Acid",
+        "value": "1.0",
+        "unit": "mmol/L",
+        "abnormal": false
+      },
+      {
+        "name": "Urinalysis",
+        "value": "Positive",
+        "unit": "",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "IV ceftriaxone x1 dose in ED",
+      "Oral ciprofloxacin",
+      "IV normal saline 1L"
+    ],
+    "ivMedicationsRequired": false,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": false,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Does Not Meet",
+    "riskScore": 89,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Partially Met",
+      "intensityOfService": "Not Met",
+      "admissionCriteria": "Not Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [
+      {
+        "ruleId": "RULE-MN-IS-001",
+        "category": "INTENSITY_OF_SERVICE",
+        "severity": "High",
+        "description": "No hospital-level services identified: no IV medications required, no ICU care, no surgical procedures, no telemetry, no supplemental oxygen, and no isolation precautions. Services provided could potentially be delivered at a lower level of care.",
+        "recommendation": "Review whether oral medications, outpatient monitoring, or observation status would have been appropriate. Document any services requiring inpatient-level nursing or monitoring intensity.",
+        "financialImpact": -5756
+      },
+      {
+        "ruleId": "RULE-MN-IS-002",
+        "category": "INTENSITY_OF_SERVICE",
+        "severity": "Medium",
+        "description": "Patient received only a single IV medication dose before transitioning to oral therapy. A single IV dose in the ED does not typically justify inpatient admission unless other intensity criteria are met.",
+        "recommendation": "Document clinical rationale for why ongoing IV therapy or inpatient monitoring was required beyond the initial IV dose. Consider whether ED observation or outpatient follow-up was appropriate.",
+        "financialImpact": -3453.6
+      },
+      {
+        "ruleId": "RULE-MN-AC-002",
+        "category": "ADMISSION_CRITERIA",
+        "severity": "Critical",
+        "description": "Clinical documentation suggests condition is manageable in an outpatient setting. Patient is tolerating oral intake, ambulatory, and hemodynamically stable. Inpatient admission criteria may not be met.",
+        "recommendation": "Consider retrospective review for observation or outpatient status. Ensure documentation clearly supports why inpatient-level care was required despite stable presentation.",
+        "financialImpact": -5756
+      },
+      {
+        "ruleId": "RULE-MN-DOC-001",
+        "category": "DOCUMENTATION_GAP",
+        "severity": "Critical",
+        "description": "Clinical documentation contains language suggesting the condition did not require inpatient admission. This significantly weakens medical necessity justification and increases denial risk on payer review.",
+        "recommendation": "Query attending physician to clarify medical necessity. If inpatient care was truly required, documentation must be amended to remove contradictory language and add specific clinical criteria supporting admission. CDI query recommended.",
+        "financialImpact": -5756
+      }
+    ],
+    "agentSummary": "Medical necessity criteria for inpatient admission are NOT met. 4 findings identified (2 critical). Recommended level of care: Inpatient. Estimated denial exposure: $20,721.6. Denial risk: 100%.",
+    "agentConfidence": 56,
+    "denialRisk": 100,
+    "estimatedDenialAmount": 5756,
+    "reviewedAt": "2026-02-19T05:23:29.183Z"
+  },
+  {
+    "id": "MN-003",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1003",
+    "beneficiaryName": "Dorothy Adams",
+    "admissionDate": "2026-01-10",
+    "dischargeDate": "2026-01-13",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 3,
+    "attendingPhysicianNPI": "4567890123",
+    "attendingPhysicianName": "Dr. James Kumar",
+    "attendingSpecialty": "Cardiology",
+    "assignedDRG": "291",
+    "assignedDRGDescription": "Heart Failure & Shock w MCC",
+    "billedAmount": 14100,
+    "primaryDiagnosis": {
+      "code": "I50.33",
+      "description": "Acute on chronic combined systolic and diastolic heart failure",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N18.3",
+        "description": "Chronic kidney disease, stage 3",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "81-year-old female with acute decompensated CHF. BNP 2840 pg/mL. CXR bilateral pleural effusions, pulmonary edema. O2 sat 84% on room air, required BiPAP then high-flow NC. IV furosemide drip with strict I&O monitoring. Weight loss 10 lbs over 3 days. Echocardiogram EF 20%. Required continuous telemetry for arrhythmia monitoring. Inpatient admission clearly necessary for respiratory failure and hemodynamic monitoring.",
+    "admissionVitals": {
+      "bloodPressure": "168/98",
+      "heartRate": 112,
+      "temperature": 98.2,
+      "respiratoryRate": 28,
+      "o2Saturation": 84
+    },
+    "admissionLabValues": [
+      {
+        "name": "BNP",
+        "value": "2840",
+        "unit": "pg/mL",
+        "abnormal": true
+      },
+      {
+        "name": "Troponin",
+        "value": "0.06",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "Creatinine",
+        "value": "2.1",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "Sodium",
+        "value": "128",
+        "unit": "mEq/L",
+        "abnormal": true
+      },
+      {
+        "name": "Potassium",
+        "value": "5.4",
+        "unit": "mEq/L",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "IV furosemide drip",
+      "BiPAP ventilation",
+      "High-flow nasal cannula",
+      "Continuous telemetry",
+      "Daily weights",
+      "Fluid restriction",
+      "IV dobutamine"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": true,
+    "oxygenRequired": true,
+    "isolationRequired": false,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 6,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Dorothy Adams presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 10,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:29.385Z"
+  },
+  {
+    "id": "MN-004",
+    "providerId": "PRV-004",
+    "providerName": "Heart & Vascular Institute",
+    "beneficiaryId": "BEN-1004",
+    "beneficiaryName": "James Mitchell",
+    "admissionDate": "2026-01-12",
+    "dischargeDate": "2026-01-14",
+    "admissionType": "Elective",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 2,
+    "attendingPhysicianNPI": "5678901234",
+    "attendingPhysicianName": "Dr. Priya Patel",
+    "attendingSpecialty": "Interventional Cardiology",
+    "assignedDRG": "247",
+    "assignedDRGDescription": "Percutaneous Cardiovascular Proc w Drug-Eluting Stent w MCC",
+    "billedAmount": 21650,
+    "primaryDiagnosis": {
+      "code": "I25.10",
+      "description": "Atherosclerotic heart disease of native coronary artery",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "71-year-old male admitted for elective diagnostic cardiac catheterization for stable angina on exertion. No acute symptoms on day of admission. Cath revealed 60% LAD and 40% RCA stenosis — non-obstructive, no stent placed. Patient stable post-procedure, ambulating same day. Tolerating PO diet. No chest pain, no hemodynamic instability. Diagnostic cardiac catheterization is routinely performed as an outpatient procedure. No complications requiring overnight observation beyond standard recovery.",
+    "admissionVitals": {
+      "bloodPressure": "132/78",
+      "heartRate": 72,
+      "temperature": 98.4,
+      "respiratoryRate": 16,
+      "o2Saturation": 97
+    },
+    "admissionLabValues": [
+      {
+        "name": "Troponin",
+        "value": "<0.01",
+        "unit": "ng/mL",
+        "abnormal": false
+      },
+      {
+        "name": "BNP",
+        "value": "45",
+        "unit": "pg/mL",
+        "abnormal": false
+      },
+      {
+        "name": "Creatinine",
+        "value": "1.0",
+        "unit": "mg/dL",
+        "abnormal": false
+      },
+      {
+        "name": "Hemoglobin",
+        "value": "14.2",
+        "unit": "g/dL",
+        "abnormal": false
+      }
+    ],
+    "treatmentsProvided": [
+      "Diagnostic cardiac catheterization",
+      "IV conscious sedation",
+      "Groin site observation",
+      "Oral medications"
+    ],
+    "ivMedicationsRequired": false,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": false,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Does Not Meet",
+    "riskScore": 85,
+    "recommendedLevelOfCare": "Observation",
+    "criteriaAssessment": {
+      "severityOfIllness": "Not Met",
+      "intensityOfService": "Not Met",
+      "admissionCriteria": "Not Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [
+      {
+        "ruleId": "RULE-MN-SI-001",
+        "category": "SEVERITY_OF_ILLNESS",
+        "severity": "High",
+        "description": "Admission vitals are within normal limits and lab values show minimal derangement. Severity of illness criteria for inpatient admission may not be met. Patient appears hemodynamically stable without evidence of acute organ dysfunction.",
+        "recommendation": "Evaluate whether observation status or outpatient management would be appropriate. Document specific clinical indicators that require inpatient-level monitoring if applicable.",
+        "financialImpact": -21650
+      },
+      {
+        "ruleId": "RULE-MN-IS-001",
+        "category": "INTENSITY_OF_SERVICE",
+        "severity": "High",
+        "description": "No hospital-level services identified: no IV medications required, no ICU care, no surgical procedures, no telemetry, no supplemental oxygen, and no isolation precautions. Services provided could potentially be delivered at a lower level of care.",
+        "recommendation": "Review whether oral medications, outpatient monitoring, or observation status would have been appropriate. Document any services requiring inpatient-level nursing or monitoring intensity.",
+        "financialImpact": -21650
+      },
+      {
+        "ruleId": "RULE-MN-AC-001",
+        "category": "ADMISSION_CRITERIA",
+        "severity": "Critical",
+        "description": "Elective admission for diagnostic evaluation without a therapeutic procedure or ICU-level care. Elective diagnostic workups and monitoring can typically be performed in an outpatient or observation setting.",
+        "recommendation": "Review admission criteria. Elective admissions should have a clear therapeutic intent. If the admission is for pre-procedural evaluation, document the planned procedure and medical necessity for inpatient pre-op stay.",
+        "financialImpact": -21650
+      },
+      {
+        "ruleId": "RULE-MN-DOC-002",
+        "category": "DOCUMENTATION_GAP",
+        "severity": "Medium",
+        "description": "For this condition, payers typically require documentation of failed outpatient therapy before approving inpatient admission. No documentation of failed oral antibiotics, outpatient treatment failure, or clinical progression despite outpatient management.",
+        "recommendation": "Document any prior outpatient treatment attempts and why they were insufficient. If the patient was directly admitted, document clinical severity that precluded outpatient trial. This documentation strengthens medical necessity and reduces denial risk.",
+        "financialImpact": -8660
+      }
+    ],
+    "agentSummary": "Medical necessity criteria for inpatient admission are NOT met. 4 findings identified (1 critical). Recommended level of care: Observation. Estimated denial exposure: $73,610. Denial risk: 100%.",
+    "agentConfidence": 56,
+    "denialRisk": 100,
+    "estimatedDenialAmount": 21650,
+    "reviewedAt": "2026-02-19T05:23:29.587Z"
+  },
+  {
+    "id": "MN-005",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1005",
+    "beneficiaryName": "Patricia Brown",
+    "admissionDate": "2026-01-15",
+    "dischargeDate": "2026-01-17",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 2,
+    "attendingPhysicianNPI": "6789012345",
+    "attendingPhysicianName": "Dr. Amy Rodriguez",
+    "attendingSpecialty": "Pulmonology",
+    "assignedDRG": "203",
+    "assignedDRGDescription": "Bronchitis & Asthma w/o CC/MCC",
+    "billedAmount": 4250,
+    "primaryDiagnosis": {
+      "code": "J45.41",
+      "description": "Moderate persistent asthma with acute exacerbation",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [],
+    "clinicalNotes": "42-year-old female presented with wheezing and dyspnea. Peak flow 70% predicted on arrival, improved to 85% after one nebulizer treatment. O2 sat 95% on room air. No accessory muscle use. Able to speak in full sentences. Responded to standard nebulizer therapy within 2 hours. Transitioned to metered dose inhaler and oral prednisone. Ambulating without distress. Tolerating oral intake. Meets observation criteria but does not meet inpatient admission criteria — expected recovery within 24 hours with standard bronchodilator therapy.",
+    "admissionVitals": {
+      "bloodPressure": "128/76",
+      "heartRate": 96,
+      "temperature": 98.6,
+      "respiratoryRate": 22,
+      "o2Saturation": 95
+    },
+    "admissionLabValues": [
+      {
+        "name": "Peak Flow",
+        "value": "70%",
+        "unit": "predicted",
+        "abnormal": true
+      },
+      {
+        "name": "WBC",
+        "value": "9.8",
+        "unit": "K/uL",
+        "abnormal": false
+      },
+      {
+        "name": "ABG pH",
+        "value": "7.42",
+        "unit": "",
+        "abnormal": false
+      },
+      {
+        "name": "ABG pCO2",
+        "value": "36",
+        "unit": "mmHg",
+        "abnormal": false
+      }
+    ],
+    "treatmentsProvided": [
+      "Albuterol nebulizer x3",
+      "Oral prednisone",
+      "MDI teaching",
+      "Discharge with action plan"
+    ],
+    "ivMedicationsRequired": false,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": false,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Queried",
+    "riskScore": 54,
+    "recommendedLevelOfCare": "Observation",
+    "criteriaAssessment": {
+      "severityOfIllness": "Not Met",
+      "intensityOfService": "Not Met",
+      "admissionCriteria": "Not Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [
+      {
+        "ruleId": "RULE-MN-IS-001",
+        "category": "INTENSITY_OF_SERVICE",
+        "severity": "High",
+        "description": "No hospital-level services identified: no IV medications required, no ICU care, no surgical procedures, no telemetry, no supplemental oxygen, and no isolation precautions. Services provided could potentially be delivered at a lower level of care.",
+        "recommendation": "Review whether oral medications, outpatient monitoring, or observation status would have been appropriate. Document any services requiring inpatient-level nursing or monitoring intensity.",
+        "financialImpact": -4250
+      }
+    ],
+    "agentSummary": "1 review finding identified requiring clinical clarification. Denial risk: 80%. Physician advisor review recommended for medical necessity determination.",
+    "agentConfidence": 80,
+    "denialRisk": 80,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:29.789Z"
+  },
+  {
+    "id": "MN-006",
+    "providerId": "PRV-003",
+    "providerName": "St. Mary's Regional Medical Center",
+    "beneficiaryId": "BEN-1006",
+    "beneficiaryName": "William Davis",
+    "admissionDate": "2026-01-18",
+    "dischargeDate": "2026-02-02",
+    "admissionType": "Emergency",
+    "dischargeStatus": "LTAC",
+    "lengthOfStay": 15,
+    "attendingPhysicianNPI": "3456789012",
+    "attendingPhysicianName": "Dr. Lisa Park",
+    "attendingSpecialty": "Critical Care",
+    "assignedDRG": "207",
+    "assignedDRGDescription": "Resp System Diagnosis w Ventilator Support >96 Hours",
+    "billedAmount": 52800,
+    "primaryDiagnosis": {
+      "code": "J96.00",
+      "description": "Acute respiratory failure, unspecified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "J18.9",
+        "description": "Pneumonia, unspecified organism",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "J80",
+        "description": "Acute respiratory distress syndrome",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "A41.9",
+        "description": "Sepsis, unspecified organism",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "73-year-old male admitted with bilateral pneumonia progressing to ARDS. Intubated on day 1 for P/F ratio 85. Required mechanical ventilation for 192 hours. PEEP 14, FiO2 60-80%. ICU stay with vasopressor support. Tracheostomy on day 10. Weaned to trach collar day 13. Severe illness requiring continuous ICU-level care. Inpatient admission clearly medically necessary — life-threatening respiratory failure requiring mechanical ventilation.",
+    "admissionVitals": {
+      "bloodPressure": "88/52",
+      "heartRate": 126,
+      "temperature": 103.2,
+      "respiratoryRate": 34,
+      "o2Saturation": 78
+    },
+    "admissionLabValues": [
+      {
+        "name": "WBC",
+        "value": "24.6",
+        "unit": "K/uL",
+        "abnormal": true
+      },
+      {
+        "name": "Lactic Acid",
+        "value": "5.1",
+        "unit": "mmol/L",
+        "abnormal": true
+      },
+      {
+        "name": "PaO2/FiO2",
+        "value": "85",
+        "unit": "ratio",
+        "abnormal": true
+      },
+      {
+        "name": "Procalcitonin",
+        "value": "12.4",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "Creatinine",
+        "value": "2.9",
+        "unit": "mg/dL",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "Endotracheal intubation",
+      "Mechanical ventilation 192hrs",
+      "Vasopressor support",
+      "IV antibiotics",
+      "Tracheostomy",
+      "Central line",
+      "Arterial line",
+      "Prone positioning"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": true,
+    "surgicalProcedure": true,
+    "telemetryRequired": true,
+    "oxygenRequired": true,
+    "isolationRequired": true,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 6,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient William Davis presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 10,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:29.991Z"
+  },
+  {
+    "id": "MN-007",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1007",
+    "beneficiaryName": "Helen Martinez",
+    "admissionDate": "2026-01-20",
+    "dischargeDate": "2026-01-22",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 2,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "392",
+    "assignedDRGDescription": "Esophagitis, Gastroenteritis & Misc Digestive Disorders w/o MCC",
+    "billedAmount": 4800,
+    "primaryDiagnosis": {
+      "code": "K52.9",
+      "description": "Noninfective gastroenteritis and colitis, unspecified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "E86.0",
+        "description": "Dehydration",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "R11.2",
+        "description": "Nausea with vomiting, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "48-year-old female presented with 24 hours of nausea, vomiting, and diarrhea. Vitals stable in ED. Mild dehydration. Received 2L IV fluid in ED with symptom improvement. Tolerating clear liquids by hour 4 in ED. No fever, no bloody stools. Abdominal exam benign — soft, non-tender. Labs unremarkable except mild BUN elevation. Patient could have been managed in observation or discharged from ED after rehydration. Symptoms resolved rapidly with IV fluids.",
+    "admissionVitals": {
+      "bloodPressure": "118/72",
+      "heartRate": 92,
+      "temperature": 98.9,
+      "respiratoryRate": 16,
+      "o2Saturation": 99
+    },
+    "admissionLabValues": [
+      {
+        "name": "WBC",
+        "value": "8.4",
+        "unit": "K/uL",
+        "abnormal": false
+      },
+      {
+        "name": "BUN",
+        "value": "28",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "Creatinine",
+        "value": "1.2",
+        "unit": "mg/dL",
+        "abnormal": false
+      },
+      {
+        "name": "Potassium",
+        "value": "3.4",
+        "unit": "mEq/L",
+        "abnormal": false
+      },
+      {
+        "name": "Lipase",
+        "value": "32",
+        "unit": "U/L",
+        "abnormal": false
+      }
+    ],
+    "treatmentsProvided": [
+      "IV normal saline 2L",
+      "IV ondansetron x2",
+      "Oral clear liquid diet",
+      "Oral electrolyte solution"
+    ],
+    "ivMedicationsRequired": false,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": false,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Does Not Meet",
+    "riskScore": 82,
+    "recommendedLevelOfCare": "Observation",
+    "criteriaAssessment": {
+      "severityOfIllness": "Not Met",
+      "intensityOfService": "Not Met",
+      "admissionCriteria": "Not Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [
+      {
+        "ruleId": "RULE-MN-SI-001",
+        "category": "SEVERITY_OF_ILLNESS",
+        "severity": "High",
+        "description": "Admission vitals are within normal limits and lab values show minimal derangement. Severity of illness criteria for inpatient admission may not be met. Patient appears hemodynamically stable without evidence of acute organ dysfunction.",
+        "recommendation": "Evaluate whether observation status or outpatient management would be appropriate. Document specific clinical indicators that require inpatient-level monitoring if applicable.",
+        "financialImpact": -4800
+      },
+      {
+        "ruleId": "RULE-MN-IS-001",
+        "category": "INTENSITY_OF_SERVICE",
+        "severity": "High",
+        "description": "No hospital-level services identified: no IV medications required, no ICU care, no surgical procedures, no telemetry, no supplemental oxygen, and no isolation precautions. Services provided could potentially be delivered at a lower level of care.",
+        "recommendation": "Review whether oral medications, outpatient monitoring, or observation status would have been appropriate. Document any services requiring inpatient-level nursing or monitoring intensity.",
+        "financialImpact": -4800
+      },
+      {
+        "ruleId": "RULE-MN-DOC-001",
+        "category": "DOCUMENTATION_GAP",
+        "severity": "Critical",
+        "description": "Clinical documentation contains language suggesting the condition did not require inpatient admission. This significantly weakens medical necessity justification and increases denial risk on payer review.",
+        "recommendation": "Query attending physician to clarify medical necessity. If inpatient care was truly required, documentation must be amended to remove contradictory language and add specific clinical criteria supporting admission. CDI query recommended.",
+        "financialImpact": -4800
+      }
+    ],
+    "agentSummary": "Medical necessity criteria for inpatient admission are NOT met. 3 findings identified (1 critical). Recommended level of care: Observation. Estimated denial exposure: $14,400. Denial risk: 100%.",
+    "agentConfidence": 64,
+    "denialRisk": 100,
+    "estimatedDenialAmount": 4800,
+    "reviewedAt": "2026-02-19T05:23:30.193Z"
+  },
+  {
+    "id": "MN-008",
+    "providerId": "PRV-004",
+    "providerName": "Heart & Vascular Institute",
+    "beneficiaryId": "BEN-1008",
+    "beneficiaryName": "Charles Wilson",
+    "admissionDate": "2026-01-22",
+    "dischargeDate": "2026-01-25",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 3,
+    "attendingPhysicianNPI": "4567890123",
+    "attendingPhysicianName": "Dr. James Kumar",
+    "attendingSpecialty": "Cardiology",
+    "assignedDRG": "280",
+    "assignedDRGDescription": "Acute Myocardial Infarction, Discharged Alive w MCC",
+    "billedAmount": 10900,
+    "primaryDiagnosis": {
+      "code": "I21.09",
+      "description": "STEMI involving anterior wall",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I25.10",
+        "description": "Atherosclerotic heart disease",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "I50.9",
+        "description": "Heart failure, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "62-year-old male presented with crushing chest pain, ST elevation V1-V4. Troponin I 12.4. Emergent PCI with drug-eluting stent to LAD. Post-PCI EF 45%. Required continuous telemetry, IV heparin drip, dual antiplatelet therapy. ICU observation first 24 hours. Inpatient admission clearly necessary for acute STEMI requiring emergent catheterization and post-procedural monitoring.",
+    "admissionVitals": {
+      "bloodPressure": "96/62",
+      "heartRate": 108,
+      "temperature": 98.6,
+      "respiratoryRate": 22,
+      "o2Saturation": 93
+    },
+    "admissionLabValues": [
+      {
+        "name": "Troponin I",
+        "value": "12.4",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "CK-MB",
+        "value": "86",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "BNP",
+        "value": "680",
+        "unit": "pg/mL",
+        "abnormal": true
+      },
+      {
+        "name": "INR",
+        "value": "1.0",
+        "unit": "",
+        "abnormal": false
+      }
+    ],
+    "treatmentsProvided": [
+      "Emergent PCI with DES to LAD",
+      "IV heparin drip",
+      "IV nitroglycerin",
+      "Dual antiplatelet therapy",
+      "Continuous telemetry",
+      "ICU monitoring"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": true,
+    "surgicalProcedure": true,
+    "telemetryRequired": true,
+    "oxygenRequired": true,
+    "isolationRequired": false,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 12,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Partially Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Partially Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Charles Wilson presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 20,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:30.395Z"
+  },
+  {
+    "id": "MN-009",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1009",
+    "beneficiaryName": "Richard Thompson",
+    "admissionDate": "2026-01-25",
+    "dischargeDate": "2026-01-27",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 2,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "603",
+    "assignedDRGDescription": "Cellulitis w/o MCC",
+    "billedAmount": 5500,
+    "primaryDiagnosis": {
+      "code": "L03.115",
+      "description": "Cellulitis of right lower limb",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "E11.621",
+        "description": "Type 2 DM with foot ulcer",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "59-year-old male with cellulitis of right lower leg. Area of erythema 8cm x 5cm, non-fluctuant, no abscess. Afebrile. WBC 11.8. No streaking lymphangitis. Patient ambulatory. Could tolerate oral antibiotics. No failed outpatient oral antibiotics prior to admission. No signs of systemic toxicity. Cellulitis limited in extent without complicating features. Oral antibiotics with outpatient follow-up would be appropriate initial management per IDSA guidelines.",
+    "admissionVitals": {
+      "bloodPressure": "136/82",
+      "heartRate": 76,
+      "temperature": 99.2,
+      "respiratoryRate": 16,
+      "o2Saturation": 98
+    },
+    "admissionLabValues": [
+      {
+        "name": "WBC",
+        "value": "11.8",
+        "unit": "K/uL",
+        "abnormal": true
+      },
+      {
+        "name": "CRP",
+        "value": "4.2",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "Blood Glucose",
+        "value": "186",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "HbA1c",
+        "value": "8.4",
+        "unit": "%",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "IV vancomycin x3 doses",
+      "Wound care",
+      "Oral antibiotics on discharge"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": false,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 18,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Partially Met",
+      "intensityOfService": "Partially Met",
+      "admissionCriteria": "Partially Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Richard Thompson presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 30,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:30.597Z"
+  },
+  {
+    "id": "MN-010",
+    "providerId": "PRV-005",
+    "providerName": "Neuroscience Center",
+    "beneficiaryId": "BEN-1010",
+    "beneficiaryName": "Barbara Anderson",
+    "admissionDate": "2026-01-28",
+    "dischargeDate": "2026-02-04",
+    "admissionType": "Emergency",
+    "dischargeStatus": "SNF",
+    "lengthOfStay": 7,
+    "attendingPhysicianNPI": "7890123456",
+    "attendingPhysicianName": "Dr. Kevin Nguyen",
+    "attendingSpecialty": "Neurology",
+    "assignedDRG": "064",
+    "assignedDRGDescription": "Intracranial Hemorrhage or Cerebral Infarction w MCC",
+    "billedAmount": 14200,
+    "primaryDiagnosis": {
+      "code": "I63.9",
+      "description": "Cerebral infarction, unspecified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "G81.91",
+        "description": "Hemiplegia, unspecified affecting right dominant side",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "R13.10",
+        "description": "Dysphagia, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I48.91",
+        "description": "Unspecified atrial fibrillation",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "79-year-old female with acute left MCA ischemic stroke. NIHSS 14. tPA administered within window. Required neuro ICU monitoring for 48 hours. Developed right-sided hemiplegia and dysphagia. NPO with NG tube feeding. Continuous telemetry for atrial fibrillation management. Intravenous heparin drip. PT/OT/ST daily. Complex stroke requiring ICU-level neuro monitoring, airway protection, and thrombolytic management.",
+    "admissionVitals": {
+      "bloodPressure": "182/96",
+      "heartRate": 98,
+      "temperature": 98.6,
+      "respiratoryRate": 18,
+      "o2Saturation": 96
+    },
+    "admissionLabValues": [
+      {
+        "name": "INR",
+        "value": "1.1",
+        "unit": "",
+        "abnormal": false
+      },
+      {
+        "name": "Glucose",
+        "value": "168",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "Troponin",
+        "value": "0.04",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "CT Head",
+        "value": "Early ischemic changes L MCA",
+        "unit": "",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "IV tPA",
+      "Neuro ICU monitoring",
+      "IV heparin drip",
+      "NG tube feeding",
+      "Continuous telemetry",
+      "PT/OT/ST",
+      "Swallow evaluation"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": true,
+    "surgicalProcedure": false,
+    "telemetryRequired": true,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 12,
+    "recommendedLevelOfCare": "Skilled Nursing",
+    "criteriaAssessment": {
+      "severityOfIllness": "Partially Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Partially Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Barbara Anderson presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 20,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:30.800Z"
+  },
+  {
+    "id": "MN-011",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1011",
+    "beneficiaryName": "Thomas Garcia",
+    "admissionDate": "2026-02-01",
+    "dischargeDate": "2026-02-03",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 2,
+    "attendingPhysicianNPI": "2345678901",
+    "attendingPhysicianName": "Dr. Michael Torres",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "312",
+    "assignedDRGDescription": "Syncope & Collapse",
+    "billedAmount": 4100,
+    "primaryDiagnosis": {
+      "code": "R55",
+      "description": "Syncope and collapse",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "55-year-old male with single episode of vasovagal syncope. No prodrome of chest pain, palpitations, or SOB. Witnessed event — stood up quickly, felt lightheaded, lost consciousness for 10 seconds. No seizure activity, no incontinence. GCS 15 on arrival. CT head negative. ECG normal sinus rhythm. Troponin negative x2. Orthostatic vitals negative. Neurological exam normal. Echocardiogram normal EF 60%. This is a low-risk syncope that meets observation criteria. No high-risk features (no cardiac history, normal ECG, negative troponins). Could be evaluated with 12-24 hour telemetry in observation.",
+    "admissionVitals": {
+      "bloodPressure": "128/78",
+      "heartRate": 68,
+      "temperature": 98.4,
+      "respiratoryRate": 14,
+      "o2Saturation": 99
+    },
+    "admissionLabValues": [
+      {
+        "name": "Troponin",
+        "value": "<0.01",
+        "unit": "ng/mL",
+        "abnormal": false
+      },
+      {
+        "name": "BMP",
+        "value": "Normal",
+        "unit": "",
+        "abnormal": false
+      },
+      {
+        "name": "CBC",
+        "value": "Normal",
+        "unit": "",
+        "abnormal": false
+      },
+      {
+        "name": "Glucose",
+        "value": "96",
+        "unit": "mg/dL",
+        "abnormal": false
+      }
+    ],
+    "treatmentsProvided": [
+      "Telemetry monitoring",
+      "Serial troponins",
+      "IV normal saline 1L",
+      "CT head",
+      "Echocardiogram"
+    ],
+    "ivMedicationsRequired": false,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": true,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Queried",
+    "riskScore": 33,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Not Met",
+      "intensityOfService": "Partially Met",
+      "admissionCriteria": "Partially Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [
+      {
+        "ruleId": "RULE-MN-SI-001",
+        "category": "SEVERITY_OF_ILLNESS",
+        "severity": "High",
+        "description": "Admission vitals are within normal limits and lab values show minimal derangement. Severity of illness criteria for inpatient admission may not be met. Patient appears hemodynamically stable without evidence of acute organ dysfunction.",
+        "recommendation": "Evaluate whether observation status or outpatient management would be appropriate. Document specific clinical indicators that require inpatient-level monitoring if applicable.",
+        "financialImpact": -4100
+      }
+    ],
+    "agentSummary": "1 review finding identified requiring clinical clarification. Denial risk: 45%. Physician advisor review recommended for medical necessity determination.",
+    "agentConfidence": 80,
+    "denialRisk": 45,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:31.002Z"
+  },
+  {
+    "id": "MN-012",
+    "providerId": "PRV-003",
+    "providerName": "St. Mary's Regional Medical Center",
+    "beneficiaryId": "BEN-1012",
+    "beneficiaryName": "Susan Clark",
+    "admissionDate": "2026-02-03",
+    "dischargeDate": "2026-02-09",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 6,
+    "attendingPhysicianNPI": "0123456789",
+    "attendingPhysicianName": "Dr. John Franklin",
+    "attendingSpecialty": "Gastroenterology",
+    "assignedDRG": "376",
+    "assignedDRGDescription": "GI Hemorrhage w MCC",
+    "billedAmount": 13100,
+    "primaryDiagnosis": {
+      "code": "K92.1",
+      "description": "Melena",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "K25.4",
+        "description": "Chronic gastric ulcer with hemorrhage",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "D62",
+        "description": "Acute posthemorrhagic anemia",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "D65",
+        "description": "Disseminated intravascular coagulation",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "72-year-old female admitted with melena and hemoglobin drop from 12.1 to 7.2. Required 4 units PRBC transfusion. EGD revealed actively bleeding gastric ulcer treated with epinephrine injection and bipolar cautery. INR 4.8, platelets 68K, DIC with elevated D-dimer. Required ICU-level monitoring for hemodynamic stability during active bleed. IV PPI drip. Hemoglobin stabilized post-procedure. Clearly meets inpatient criteria — active GI hemorrhage with coagulopathy and hemodynamic compromise.",
+    "admissionVitals": {
+      "bloodPressure": "92/58",
+      "heartRate": 118,
+      "temperature": 98.2,
+      "respiratoryRate": 20,
+      "o2Saturation": 94
+    },
+    "admissionLabValues": [
+      {
+        "name": "Hemoglobin",
+        "value": "7.2",
+        "unit": "g/dL",
+        "abnormal": true
+      },
+      {
+        "name": "INR",
+        "value": "4.8",
+        "unit": "",
+        "abnormal": true
+      },
+      {
+        "name": "Platelets",
+        "value": "68",
+        "unit": "K/uL",
+        "abnormal": true
+      },
+      {
+        "name": "D-dimer",
+        "value": ">10000",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "Fibrinogen",
+        "value": "95",
+        "unit": "mg/dL",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "4 units PRBC transfusion",
+      "IV pantoprazole drip",
+      "Emergent EGD with cautery",
+      "FFP 2 units",
+      "IV vitamin K",
+      "ICU monitoring",
+      "Type and crossmatch"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": true,
+    "surgicalProcedure": true,
+    "telemetryRequired": true,
+    "oxygenRequired": true,
+    "isolationRequired": false,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 6,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Susan Clark presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 10,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:31.204Z"
+  },
+  {
+    "id": "MN-013",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1013",
+    "beneficiaryName": "Daniel Lee",
+    "admissionDate": "2026-02-05",
+    "dischargeDate": "2026-02-07",
+    "admissionType": "Urgent",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 2,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "313",
+    "assignedDRGDescription": "Chest Pain",
+    "billedAmount": 3800,
+    "primaryDiagnosis": {
+      "code": "R07.9",
+      "description": "Chest pain, unspecified",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      },
+      {
+        "code": "E78.5",
+        "description": "Hyperlipidemia, unspecified",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "52-year-old male admitted with atypical chest pain. Non-exertional, reproducible with palpation. No diaphoresis, no radiation. ECG normal sinus rhythm, no ST changes. Serial troponins negative x3 at 0, 3, and 6 hours. HEART score 2 (low risk). Stress test next morning — negative for ischemia. Normal echocardiogram. Chest pain determined to be musculoskeletal. This is a classic observation-level workup. HEART score <3 with negative troponins can be safely ruled out in observation status per ACC/AHA guidelines.",
+    "admissionVitals": {
+      "bloodPressure": "142/88",
+      "heartRate": 74,
+      "temperature": 98.4,
+      "respiratoryRate": 16,
+      "o2Saturation": 99
+    },
+    "admissionLabValues": [
+      {
+        "name": "Troponin I (0h)",
+        "value": "<0.01",
+        "unit": "ng/mL",
+        "abnormal": false
+      },
+      {
+        "name": "Troponin I (3h)",
+        "value": "<0.01",
+        "unit": "ng/mL",
+        "abnormal": false
+      },
+      {
+        "name": "Troponin I (6h)",
+        "value": "<0.01",
+        "unit": "ng/mL",
+        "abnormal": false
+      },
+      {
+        "name": "BNP",
+        "value": "32",
+        "unit": "pg/mL",
+        "abnormal": false
+      }
+    ],
+    "treatmentsProvided": [
+      "Serial troponins",
+      "Telemetry monitoring",
+      "Stress test",
+      "Echocardiogram",
+      "Aspirin 325mg"
+    ],
+    "ivMedicationsRequired": false,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": true,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Queried",
+    "riskScore": 33,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Not Met",
+      "intensityOfService": "Partially Met",
+      "admissionCriteria": "Partially Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [
+      {
+        "ruleId": "RULE-MN-SI-001",
+        "category": "SEVERITY_OF_ILLNESS",
+        "severity": "High",
+        "description": "Admission vitals are within normal limits and lab values show minimal derangement. Severity of illness criteria for inpatient admission may not be met. Patient appears hemodynamically stable without evidence of acute organ dysfunction.",
+        "recommendation": "Evaluate whether observation status or outpatient management would be appropriate. Document specific clinical indicators that require inpatient-level monitoring if applicable.",
+        "financialImpact": -3800
+      }
+    ],
+    "agentSummary": "1 review finding identified requiring clinical clarification. Denial risk: 45%. Physician advisor review recommended for medical necessity determination.",
+    "agentConfidence": 80,
+    "denialRisk": 45,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:31.408Z"
+  },
+  {
+    "id": "MN-014",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1014",
+    "beneficiaryName": "Jennifer White",
+    "admissionDate": "2026-02-07",
+    "dischargeDate": "2026-02-12",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 5,
+    "attendingPhysicianNPI": "2345678901",
+    "attendingPhysicianName": "Dr. Michael Torres",
+    "attendingSpecialty": "Pulmonology",
+    "assignedDRG": "175",
+    "assignedDRGDescription": "Pulmonary Embolism w MCC",
+    "billedAmount": 10900,
+    "primaryDiagnosis": {
+      "code": "I26.09",
+      "description": "Other pulmonary embolism with acute cor pulmonale",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure, unspecified",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "I82.409",
+        "description": "Acute embolism of unspecified deep veins of lower extremity",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "58-year-old female with massive bilateral PE on CT angiography. Hemodynamically unstable — systolic BP 78, HR 128. RV strain on echo with RV/LV ratio 1.4. Troponin elevated at 0.48 ng/mL. Received systemic tPA (alteplase) for massive PE. ICU admission for 48 hours post-thrombolysis monitoring. Heparin drip followed by transition to warfarin. Required supplemental oxygen throughout stay. Clearly meets inpatient criteria — life-threatening PE with hemodynamic instability requiring thrombolysis.",
+    "admissionVitals": {
+      "bloodPressure": "78/48",
+      "heartRate": 128,
+      "temperature": 98.8,
+      "respiratoryRate": 30,
+      "o2Saturation": 86
+    },
+    "admissionLabValues": [
+      {
+        "name": "Troponin I",
+        "value": "0.48",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "BNP",
+        "value": "1240",
+        "unit": "pg/mL",
+        "abnormal": true
+      },
+      {
+        "name": "D-dimer",
+        "value": "8500",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "ABG pO2",
+        "value": "52",
+        "unit": "mmHg",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "Systemic tPA (alteplase)",
+      "IV heparin drip",
+      "ICU monitoring 48hrs",
+      "Supplemental O2 6L NC",
+      "Continuous telemetry",
+      "Serial troponins",
+      "Repeat echo"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": true,
+    "surgicalProcedure": false,
+    "telemetryRequired": true,
+    "oxygenRequired": true,
+    "isolationRequired": false,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 6,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Jennifer White presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 10,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:31.610Z"
+  },
+  {
+    "id": "MN-015",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1015",
+    "beneficiaryName": "David Robinson",
+    "admissionDate": "2026-02-09",
+    "dischargeDate": "2026-02-11",
+    "admissionType": "Elective",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 2,
+    "attendingPhysicianNPI": "9012345678",
+    "attendingPhysicianName": "Dr. Maria Santos",
+    "attendingSpecialty": "Nephrology",
+    "assignedDRG": "684",
+    "assignedDRGDescription": "Renal Failure w/o CC/MCC",
+    "billedAmount": 4800,
+    "primaryDiagnosis": {
+      "code": "N18.4",
+      "description": "Chronic kidney disease, stage 4",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "E11.22",
+        "description": "Type 2 DM with diabetic CKD",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "68-year-old male admitted for CKD stage 4 evaluation and vascular access planning for dialysis. Elective admission. Creatinine stable at 4.2 (baseline 4.0). No acute symptoms — no edema, no uremia symptoms. Vitals stable. Ambulatory. Underwent AV fistula creation (outpatient procedure). Renal diet education. Could have been managed entirely outpatient — AV fistula creation is commonly performed as outpatient surgery, and CKD education does not require inpatient admission.",
+    "admissionVitals": {
+      "bloodPressure": "148/88",
+      "heartRate": 72,
+      "temperature": 98.4,
+      "respiratoryRate": 16,
+      "o2Saturation": 98
+    },
+    "admissionLabValues": [
+      {
+        "name": "Creatinine",
+        "value": "4.2",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "BUN",
+        "value": "52",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "eGFR",
+        "value": "18",
+        "unit": "mL/min",
+        "abnormal": true
+      },
+      {
+        "name": "Potassium",
+        "value": "4.8",
+        "unit": "mEq/L",
+        "abnormal": false
+      },
+      {
+        "name": "Hemoglobin",
+        "value": "10.8",
+        "unit": "g/dL",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "AV fistula creation",
+      "Renal diet education",
+      "Oral medications",
+      "Social work consult"
+    ],
+    "ivMedicationsRequired": false,
+    "icuAdmission": false,
+    "surgicalProcedure": true,
+    "telemetryRequired": false,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Queried",
+    "riskScore": 46,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Partially Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Partially Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [
+      {
+        "ruleId": "RULE-MN-DOC-001",
+        "category": "DOCUMENTATION_GAP",
+        "severity": "Critical",
+        "description": "Clinical documentation contains language suggesting the condition did not require inpatient admission. This significantly weakens medical necessity justification and increases denial risk on payer review.",
+        "recommendation": "Query attending physician to clarify medical necessity. If inpatient care was truly required, documentation must be amended to remove contradictory language and add specific clinical criteria supporting admission. CDI query recommended.",
+        "financialImpact": -4800
+      }
+    ],
+    "agentSummary": "1 review finding identified requiring clinical clarification. Denial risk: 60%. Physician advisor review recommended for medical necessity determination.",
+    "agentConfidence": 80,
+    "denialRisk": 60,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:31.812Z"
+  },
+  {
+    "id": "MN-016",
+    "providerId": "PRV-003",
+    "providerName": "St. Mary's Regional Medical Center",
+    "beneficiaryId": "BEN-1016",
+    "beneficiaryName": "Mary Taylor",
+    "admissionDate": "2026-02-10",
+    "dischargeDate": "2026-02-14",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 4,
+    "attendingPhysicianNPI": "3456789012",
+    "attendingPhysicianName": "Dr. Lisa Park",
+    "attendingSpecialty": "Critical Care",
+    "assignedDRG": "871",
+    "assignedDRGDescription": "Septicemia or Severe Sepsis w/o MV >96 Hours w MCC",
+    "billedAmount": 17900,
+    "primaryDiagnosis": {
+      "code": "A41.01",
+      "description": "Sepsis due to Methicillin susceptible Staphylococcus aureus",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "R65.21",
+        "description": "Severe sepsis with septic shock",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "N17.9",
+        "description": "Acute kidney failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "64-year-old female with MSSA bacteremia progressing to septic shock. Required intubation for respiratory failure, vasopressor support (norepinephrine and vasopressin), and CRRT for AKI. Multi-organ failure. ICU for 3 days. Extubated day 3, weaned off vasopressors. Source: infected central line from prior hospitalization. Line removed, IV nafcillin initiated. Clearly medically necessary — multi-organ failure with septic shock requiring ICU-level interventions.",
+    "admissionVitals": {
+      "bloodPressure": "72/38",
+      "heartRate": 134,
+      "temperature": 103.8,
+      "respiratoryRate": 32,
+      "o2Saturation": 82
+    },
+    "admissionLabValues": [
+      {
+        "name": "WBC",
+        "value": "28.4",
+        "unit": "K/uL",
+        "abnormal": true
+      },
+      {
+        "name": "Lactic Acid",
+        "value": "6.8",
+        "unit": "mmol/L",
+        "abnormal": true
+      },
+      {
+        "name": "Creatinine",
+        "value": "4.6",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "Procalcitonin",
+        "value": "22.1",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "Platelets",
+        "value": "58",
+        "unit": "K/uL",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "Intubation/mechanical ventilation",
+      "Norepinephrine drip",
+      "Vasopressin drip",
+      "CRRT (dialysis)",
+      "IV nafcillin",
+      "Central line removal",
+      "Arterial line",
+      "Blood cultures"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": true,
+    "surgicalProcedure": false,
+    "telemetryRequired": true,
+    "oxygenRequired": true,
+    "isolationRequired": true,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 6,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Mary Taylor presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 10,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:32.014Z"
+  },
+  {
+    "id": "MN-017",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1017",
+    "beneficiaryName": "George Harris",
+    "admissionDate": "2026-02-12",
+    "dischargeDate": "2026-02-15",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 3,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "304",
+    "assignedDRGDescription": "Hypertension w/o MCC",
+    "billedAmount": 4056,
+    "primaryDiagnosis": {
+      "code": "I16.0",
+      "description": "Hypertensive urgency",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "I10",
+        "description": "Essential hypertension",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "58-year-old male presented with BP 198/108. Asymptomatic — no headache, no chest pain, no visual changes, no dyspnea. No end-organ damage on workup: creatinine normal, troponin negative, CT head normal, ECG unchanged from baseline. This is hypertensive urgency (not emergency) — no acute target organ damage. BP reduced to 160/95 with oral amlodipine in ED. Guidelines recommend gradual outpatient BP reduction over 24-48 hours for hypertensive urgency without end-organ damage. Inpatient admission not warranted.",
+    "admissionVitals": {
+      "bloodPressure": "198/108",
+      "heartRate": 82,
+      "temperature": 98.4,
+      "respiratoryRate": 16,
+      "o2Saturation": 98
+    },
+    "admissionLabValues": [
+      {
+        "name": "Creatinine",
+        "value": "1.0",
+        "unit": "mg/dL",
+        "abnormal": false
+      },
+      {
+        "name": "Troponin",
+        "value": "<0.01",
+        "unit": "ng/mL",
+        "abnormal": false
+      },
+      {
+        "name": "BMP",
+        "value": "Normal",
+        "unit": "",
+        "abnormal": false
+      },
+      {
+        "name": "Urinalysis",
+        "value": "No proteinuria",
+        "unit": "",
+        "abnormal": false
+      }
+    ],
+    "treatmentsProvided": [
+      "Oral amlodipine",
+      "Oral lisinopril",
+      "Serial BP monitoring",
+      "CT head"
+    ],
+    "ivMedicationsRequired": false,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": false,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Queried",
+    "riskScore": 54,
+    "recommendedLevelOfCare": "Observation",
+    "criteriaAssessment": {
+      "severityOfIllness": "Not Met",
+      "intensityOfService": "Not Met",
+      "admissionCriteria": "Not Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [
+      {
+        "ruleId": "RULE-MN-IS-001",
+        "category": "INTENSITY_OF_SERVICE",
+        "severity": "High",
+        "description": "No hospital-level services identified: no IV medications required, no ICU care, no surgical procedures, no telemetry, no supplemental oxygen, and no isolation precautions. Services provided could potentially be delivered at a lower level of care.",
+        "recommendation": "Review whether oral medications, outpatient monitoring, or observation status would have been appropriate. Document any services requiring inpatient-level nursing or monitoring intensity.",
+        "financialImpact": -4056
+      }
+    ],
+    "agentSummary": "1 review finding identified requiring clinical clarification. Denial risk: 80%. Physician advisor review recommended for medical necessity determination.",
+    "agentConfidence": 80,
+    "denialRisk": 80,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:32.215Z"
+  },
+  {
+    "id": "MN-018",
+    "providerId": "PRV-003",
+    "providerName": "St. Mary's Regional Medical Center",
+    "beneficiaryId": "BEN-1018",
+    "beneficiaryName": "Linda Jackson",
+    "admissionDate": "2026-02-13",
+    "dischargeDate": "2026-02-18",
+    "admissionType": "Emergency",
+    "dischargeStatus": "SNF",
+    "lengthOfStay": 5,
+    "attendingPhysicianNPI": "8901234567",
+    "attendingPhysicianName": "Dr. Robert Kim",
+    "attendingSpecialty": "Orthopedic Surgery",
+    "assignedDRG": "481",
+    "assignedDRGDescription": "Hip & Femur Procedures Except Major Joint w CC",
+    "billedAmount": 12290,
+    "primaryDiagnosis": {
+      "code": "S72.001A",
+      "description": "Fracture of unspecified part of neck of right femur",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "M80.08XA",
+        "description": "Age-related osteoporosis with pathological fracture",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "84-year-old female with displaced right femoral neck fracture after fall. Underwent ORIF with dynamic hip screw on day 1. Required post-operative pain management with PCA morphine. PT initiated day 1 post-op. Unable to weight-bear independently. Required daily wound care and anticoagulation for DVT prophylaxis. Surgical admission clearly medically necessary — displaced hip fracture requires operative fixation and post-operative inpatient rehabilitation.",
+    "admissionVitals": {
+      "bloodPressure": "148/82",
+      "heartRate": 96,
+      "temperature": 98.6,
+      "respiratoryRate": 18,
+      "o2Saturation": 96
+    },
+    "admissionLabValues": [
+      {
+        "name": "Hemoglobin",
+        "value": "10.2",
+        "unit": "g/dL",
+        "abnormal": true
+      },
+      {
+        "name": "INR",
+        "value": "1.0",
+        "unit": "",
+        "abnormal": false
+      },
+      {
+        "name": "Creatinine",
+        "value": "1.2",
+        "unit": "mg/dL",
+        "abnormal": false
+      },
+      {
+        "name": "Type & Screen",
+        "value": "O positive",
+        "unit": "",
+        "abnormal": false
+      }
+    ],
+    "treatmentsProvided": [
+      "ORIF with dynamic hip screw",
+      "PCA morphine",
+      "IV cefazolin prophylaxis",
+      "DVT prophylaxis (enoxaparin)",
+      "PT/OT daily",
+      "Wound care"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": false,
+    "surgicalProcedure": true,
+    "telemetryRequired": false,
+    "oxygenRequired": false,
+    "isolationRequired": false,
+    "medNecessityStatus": "Queried",
+    "riskScore": 27,
+    "recommendedLevelOfCare": "Skilled Nursing",
+    "criteriaAssessment": {
+      "severityOfIllness": "Not Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Partially Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [
+      {
+        "ruleId": "RULE-MN-SI-001",
+        "category": "SEVERITY_OF_ILLNESS",
+        "severity": "High",
+        "description": "Admission vitals are within normal limits and lab values show minimal derangement. Severity of illness criteria for inpatient admission may not be met. Patient appears hemodynamically stable without evidence of acute organ dysfunction.",
+        "recommendation": "Evaluate whether observation status or outpatient management would be appropriate. Document specific clinical indicators that require inpatient-level monitoring if applicable.",
+        "financialImpact": -12290
+      }
+    ],
+    "agentSummary": "1 review finding identified requiring clinical clarification. Denial risk: 35%. Physician advisor review recommended for medical necessity determination.",
+    "agentConfidence": 80,
+    "denialRisk": 35,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:32.416Z"
+  },
+  {
+    "id": "MN-019",
+    "providerId": "PRV-002",
+    "providerName": "City Medical Center",
+    "beneficiaryId": "BEN-1019",
+    "beneficiaryName": "Robert Wright",
+    "admissionDate": "2026-02-14",
+    "dischargeDate": "2026-02-16",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 2,
+    "attendingPhysicianNPI": "2345678901",
+    "attendingPhysicianName": "Dr. Michael Torres",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "190",
+    "assignedDRGDescription": "Chronic Obstructive Pulmonary Disease w MCC",
+    "billedAmount": 9436,
+    "primaryDiagnosis": {
+      "code": "J44.1",
+      "description": "COPD with acute exacerbation",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      }
+    ],
+    "clinicalNotes": "67-year-old male with severe COPD exacerbation. O2 sat 82% on room air. ABG: pH 7.31, pCO2 58, pO2 52. Required BiPAP for 48 hours. IV methylprednisolone and continuous nebulizers. Significant hypercarbic respiratory failure. Could not maintain adequate oxygenation without mechanical ventilatory support. Inpatient admission medically necessary — acute respiratory failure requiring non-invasive ventilation cannot be safely managed in observation or outpatient setting.",
+    "admissionVitals": {
+      "bloodPressure": "152/88",
+      "heartRate": 108,
+      "temperature": 99.1,
+      "respiratoryRate": 28,
+      "o2Saturation": 82
+    },
+    "admissionLabValues": [
+      {
+        "name": "ABG pH",
+        "value": "7.31",
+        "unit": "",
+        "abnormal": true
+      },
+      {
+        "name": "ABG pCO2",
+        "value": "58",
+        "unit": "mmHg",
+        "abnormal": true
+      },
+      {
+        "name": "ABG pO2",
+        "value": "52",
+        "unit": "mmHg",
+        "abnormal": true
+      },
+      {
+        "name": "WBC",
+        "value": "13.4",
+        "unit": "K/uL",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "BiPAP ventilation 48hrs",
+      "IV methylprednisolone",
+      "Continuous albuterol/ipratropium nebs",
+      "Supplemental O2",
+      "IV antibiotics"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": true,
+    "oxygenRequired": true,
+    "isolationRequired": false,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 6,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Met",
+      "intensityOfService": "Met",
+      "admissionCriteria": "Met",
+      "continuedStay": "Justified"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Robert Wright presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 10,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:32.618Z"
+  },
+  {
+    "id": "MN-020",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-1020",
+    "beneficiaryName": "Karen Lewis",
+    "admissionDate": "2026-02-15",
+    "dischargeDate": "2026-02-19",
+    "admissionType": "Emergency",
+    "dischargeStatus": "Home",
+    "lengthOfStay": 4,
+    "attendingPhysicianNPI": "1234567890",
+    "attendingPhysicianName": "Dr. Sarah Chen",
+    "attendingSpecialty": "Internal Medicine",
+    "assignedDRG": "193",
+    "assignedDRGDescription": "Simple Pneumonia & Pleurisy w MCC",
+    "billedAmount": 11150,
+    "primaryDiagnosis": {
+      "code": "J18.9",
+      "description": "Pneumonia, unspecified organism",
+      "isPrimary": true,
+      "isMCC": false,
+      "isCC": false
+    },
+    "secondaryDiagnoses": [
+      {
+        "code": "J96.00",
+        "description": "Acute respiratory failure",
+        "isPrimary": false,
+        "isMCC": true,
+        "isCC": false
+      },
+      {
+        "code": "E11.65",
+        "description": "Type 2 DM with hyperglycemia",
+        "isPrimary": false,
+        "isMCC": false,
+        "isCC": true
+      }
+    ],
+    "clinicalNotes": "74-year-old female with community-acquired pneumonia. O2 sat 88% on room air, requiring 4L NC. CXR right lower lobe consolidation. WBC 18.2. CURB-65 score 3 (high severity). Required IV antibiotics (ceftriaxone + azithromycin) and continuous supplemental oxygen. Unable to maintain adequate oxygenation without support. Pneumonia with respiratory failure meeting inpatient admission criteria per ATS/IDSA guidelines (CURB-65 >= 3).",
+    "admissionVitals": {
+      "bloodPressure": "108/68",
+      "heartRate": 102,
+      "temperature": 102.8,
+      "respiratoryRate": 26,
+      "o2Saturation": 88
+    },
+    "admissionLabValues": [
+      {
+        "name": "WBC",
+        "value": "18.2",
+        "unit": "K/uL",
+        "abnormal": true
+      },
+      {
+        "name": "Procalcitonin",
+        "value": "3.8",
+        "unit": "ng/mL",
+        "abnormal": true
+      },
+      {
+        "name": "Creatinine",
+        "value": "1.4",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "Blood Glucose",
+        "value": "286",
+        "unit": "mg/dL",
+        "abnormal": true
+      },
+      {
+        "name": "Lactic Acid",
+        "value": "2.4",
+        "unit": "mmol/L",
+        "abnormal": true
+      }
+    ],
+    "treatmentsProvided": [
+      "IV ceftriaxone",
+      "IV azithromycin",
+      "Supplemental O2 4L NC",
+      "IV insulin drip",
+      "IV normal saline",
+      "Chest physiotherapy"
+    ],
+    "ivMedicationsRequired": true,
+    "icuAdmission": false,
+    "surgicalProcedure": false,
+    "telemetryRequired": false,
+    "oxygenRequired": true,
+    "isolationRequired": true,
+    "medNecessityStatus": "Meets Criteria",
+    "riskScore": 12,
+    "recommendedLevelOfCare": "Inpatient",
+    "criteriaAssessment": {
+      "severityOfIllness": "Met",
+      "intensityOfService": "Partially Met",
+      "admissionCriteria": "Partially Met",
+      "continuedStay": "Indeterminate"
+    },
+    "medNecessityFindings": [],
+    "agentSummary": "Medical necessity criteria for inpatient admission are met. Patient Karen Lewis presented with clinical severity and service intensity supporting inpatient-level care. No adverse findings identified.",
+    "agentConfidence": 92,
+    "denialRisk": 20,
+    "estimatedDenialAmount": 0,
+    "reviewedAt": "2026-02-19T05:23:32.819Z"
+  }
+]

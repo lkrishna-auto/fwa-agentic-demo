@@ -1,0 +1,264 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DRG Claims Dataset",
+  "description": "Schema for inpatient DRG claims used by the DRG Clinical Validation Review Agent",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/DRGClaim"
+  },
+  "definitions": {
+    "ICD10Code": {
+      "type": "object",
+      "description": "An ICD-10-CM diagnosis code with CC/MCC classification",
+      "required": ["code", "description", "isPrimary", "isMCC", "isCC"],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "ICD-10-CM diagnosis code (e.g., A41.9, I50.9, J96.00)",
+          "pattern": "^[A-Z][0-9]{2}(\\.[0-9A-Z]{1,4})?$"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable description of the diagnosis"
+        },
+        "isPrimary": {
+          "type": "boolean",
+          "description": "Whether this is the principal (primary) diagnosis"
+        },
+        "isMCC": {
+          "type": "boolean",
+          "description": "Whether this diagnosis qualifies as a Major Complication/Comorbidity"
+        },
+        "isCC": {
+          "type": "boolean",
+          "description": "Whether this diagnosis qualifies as a Complication/Comorbidity"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DRGValidationFinding": {
+      "type": "object",
+      "description": "A finding from the DRG validation agent",
+      "required": ["ruleId", "category", "severity", "description", "recommendation"],
+      "properties": {
+        "ruleId": {
+          "type": "string",
+          "description": "Unique identifier for the validation rule that triggered this finding (e.g., RULE-SEP-001)"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["DRG_ASSIGNMENT", "CC_MCC_VALIDATION", "CLINICAL_CRITERIA", "CODING_SEQUENCE", "UPCODING", "DOWNCODING"],
+          "description": "Category of the validation finding"
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["Critical", "High", "Medium", "Low"],
+          "description": "Severity level of the finding"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of what was found"
+        },
+        "recommendation": {
+          "type": "string",
+          "description": "Recommended action to resolve the finding"
+        },
+        "financialImpact": {
+          "type": "number",
+          "description": "Estimated financial impact in dollars. Positive = missed revenue (downcoded), negative = overbilled (upcoded)"
+        }
+      },
+      "additionalProperties": false
+    },
+    "DRGClaim": {
+      "type": "object",
+      "description": "An inpatient DRG claim with clinical data and agent validation results",
+      "required": [
+        "id",
+        "providerId",
+        "providerName",
+        "beneficiaryId",
+        "beneficiaryName",
+        "admissionDate",
+        "dischargeDate",
+        "admissionType",
+        "dischargeStatus",
+        "lengthOfStay",
+        "attendingPhysicianNPI",
+        "attendingPhysicianName",
+        "attendingSpecialty",
+        "assignedDRG",
+        "assignedDRGDescription",
+        "assignedDRGWeight",
+        "msDRGBaseRate",
+        "billedAmount",
+        "primaryDiagnosis",
+        "secondaryDiagnoses",
+        "clinicalNotes",
+        "validationStatus",
+        "riskScore"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique claim identifier (e.g., DRG-001)",
+          "pattern": "^DRG-\\d{3}$"
+        },
+        "providerId": {
+          "type": "string",
+          "description": "Provider/facility identifier (e.g., PRV-001)"
+        },
+        "providerName": {
+          "type": "string",
+          "description": "Name of the hospital or facility"
+        },
+        "beneficiaryId": {
+          "type": "string",
+          "description": "Patient/beneficiary identifier (e.g., BEN-1001)"
+        },
+        "beneficiaryName": {
+          "type": "string",
+          "description": "Patient full name"
+        },
+        "admissionDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of inpatient admission (YYYY-MM-DD)"
+        },
+        "dischargeDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of discharge (YYYY-MM-DD)"
+        },
+        "admissionType": {
+          "type": "string",
+          "enum": ["Emergency", "Elective", "Urgent", "Newborn"],
+          "description": "Type of admission"
+        },
+        "dischargeStatus": {
+          "type": "string",
+          "enum": ["Home", "SNF", "LTAC", "AMA", "Expired", "Transferred"],
+          "description": "Discharge disposition. SNF = Skilled Nursing Facility, LTAC = Long-Term Acute Care, AMA = Against Medical Advice"
+        },
+        "lengthOfStay": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Length of stay in days (dischargeDate - admissionDate)"
+        },
+        "attendingPhysicianNPI": {
+          "type": "string",
+          "description": "National Provider Identifier of the attending physician",
+          "pattern": "^\\d{10}$"
+        },
+        "attendingPhysicianName": {
+          "type": "string",
+          "description": "Name of the attending physician"
+        },
+        "attendingSpecialty": {
+          "type": "string",
+          "description": "Medical specialty of the attending physician (e.g., Internal Medicine, Cardiology, Pulmonology)"
+        },
+        "assignedDRG": {
+          "type": "string",
+          "description": "MS-DRG code assigned to this claim (e.g., 871)",
+          "pattern": "^\\d{3}$"
+        },
+        "assignedDRGDescription": {
+          "type": "string",
+          "description": "Human-readable description of the assigned MS-DRG"
+        },
+        "assignedDRGWeight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "CMS relative weight for the assigned MS-DRG"
+        },
+        "msDRGBaseRate": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Hospital-specific MS-DRG base payment rate in dollars"
+        },
+        "billedAmount": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Total billed amount (assignedDRGWeight * msDRGBaseRate)"
+        },
+        "primaryDiagnosis": {
+          "$ref": "#/definitions/ICD10Code",
+          "description": "Principal diagnosis (the condition established after study to be chiefly responsible for the admission)"
+        },
+        "secondaryDiagnoses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ICD10Code"
+          },
+          "description": "Secondary diagnoses including complications, comorbidities, and other relevant conditions"
+        },
+        "principalProcedure": {
+          "type": "string",
+          "description": "ICD-10-PCS procedure code for the principal procedure performed, if applicable"
+        },
+        "clinicalNotes": {
+          "type": "string",
+          "description": "Summary of clinical documentation including presenting symptoms, lab values, vital signs, treatments, and clinical indicators"
+        },
+        "expectedDRG": {
+          "type": "string",
+          "description": "Expected MS-DRG code after agent validation (populated after review)",
+          "pattern": "^\\d{3}$"
+        },
+        "expectedDRGDescription": {
+          "type": "string",
+          "description": "Description of the expected MS-DRG after validation"
+        },
+        "expectedDRGWeight": {
+          "type": "number",
+          "minimum": 0,
+          "description": "CMS relative weight for the expected MS-DRG"
+        },
+        "expectedReimbursement": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Expected reimbursement based on expected DRG (expectedDRGWeight * msDRGBaseRate)"
+        },
+        "financialVariance": {
+          "type": "number",
+          "description": "Difference between expected and billed amount. Positive = underbilled, negative = overbilled"
+        },
+        "validationStatus": {
+          "type": "string",
+          "enum": ["Pending", "Validated", "Queried", "Upcoded", "Downcoded"],
+          "description": "Current validation status. Pending = not yet reviewed, Validated = DRG supported, Queried = issues found needing review, Upcoded = DRG too high, Downcoded = DRG too low"
+        },
+        "agentFindings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DRGValidationFinding"
+          },
+          "description": "List of validation findings from the agent (populated after review)"
+        },
+        "agentSummary": {
+          "type": "string",
+          "description": "Plain-English summary of the agent's analysis (populated after review)"
+        },
+        "agentConfidence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Agent's confidence score in its assessment (0-100)"
+        },
+        "reviewedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when the agent reviewed this claim"
+        },
+        "riskScore": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Risk score (0-100) indicating likelihood of coding issues. Pre-seeded for pending claims, recalculated after agent review"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
