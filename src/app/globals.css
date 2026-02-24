@@ -5,6 +5,11 @@
 :root {
     --background: #ffffff;
     --foreground: #0f172a;
+    --brand: #7C3AED;
+    --brand-dark: #5B21B6;
+    --brand-light: #A78BFA;
+    --brand-bg: #F5F3FF;
+    --brand-border: #EDE9FE;
 }
 
 body {

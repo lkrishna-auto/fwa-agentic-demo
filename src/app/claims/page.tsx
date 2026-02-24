@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import Header from '@/components/layout/Header';
 import ClaimsTable from '@/components/claims/ClaimsTable';
+import OutlierDetectionPanel from '@/components/claims/OutlierDetectionPanel';
 import { Claim } from '@/types';
 
 async function getClaims(): Promise<Claim[]> {
@@ -34,6 +35,7 @@ export default async function ClaimsPage() {
                 </div>
 
                 <ClaimsTable initialClaims={claims} />
+                <OutlierDetectionPanel />
             </main>
         </div>
     );

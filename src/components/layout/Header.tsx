@@ -15,7 +15,7 @@ export default function Header({ title }: { title: string }) {
                         <span className="text-sm font-medium text-slate-700">John Investigator</span>
                         <span className="text-[11px] text-slate-400 uppercase tracking-wide font-semibold">Senior Auditor</span>
                     </div>
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 shadow-md shadow-blue-500/20 flex items-center justify-center text-white text-sm font-bold">
+                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-500 to-violet-800 shadow-md shadow-violet-500/20 flex items-center justify-center text-white text-sm font-bold">
                         JI
                     </div>
                 </div>

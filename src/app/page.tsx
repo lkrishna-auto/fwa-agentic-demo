@@ -67,7 +67,7 @@ export default async function Dashboard() {
                     <div className="lg:col-span-2 bg-white p-8 rounded-2xl border border-slate-100 shadow-[0_2px_12px_-4px_rgba(6,24,44,0.05)]">
                         <div className="flex items-center justify-between mb-8">
                             <h3 className="text-lg font-bold text-slate-900 tracking-tight">Risk Analysis Trends</h3>
-                            <select className="bg-slate-50 border border-slate-200 text-slate-600 text-sm rounded-lg px-3 py-1 outline-none focus:ring-2 focus:ring-blue-100">
+                            <select className="bg-slate-50 border border-slate-200 text-slate-600 text-sm rounded-lg px-3 py-1 outline-none focus:ring-2 focus:ring-violet-100">
                                 <option>Last 30 Days</option>
                                 <option>Last Quarter</option>
                             </select>
@@ -77,7 +77,7 @@ export default async function Dashboard() {
                             {[40, 65, 30, 80, 55, 90, 45, 60, 35, 75, 50, 85].map((h, i) => (
                                 <div key={i} className="flex-1 group relative flex flex-col justify-end h-full">
                                     <div
-                                        className={`w-full rounded-t-md transition-all duration-500 opacity-80 hover:opacity-100 group-hover:scale-y-105 origin-bottom ${h > 70 ? 'bg-gradient-to-t from-rose-500 to-rose-400' : 'bg-gradient-to-t from-blue-500 to-indigo-400'}`}
+                                        className={`w-full rounded-t-md transition-all duration-500 opacity-80 hover:opacity-100 group-hover:scale-y-105 origin-bottom ${h > 70 ? 'bg-gradient-to-t from-rose-500 to-rose-400' : 'bg-gradient-to-t from-violet-600 to-violet-400'}`}
                                         style={{ height: `${h}%` }}
                                     ></div>
                                 </div>
@@ -96,7 +96,7 @@ export default async function Dashboard() {
                         <h3 className="text-lg font-bold text-slate-900 tracking-tight mb-6">Priority Alerts</h3>
                         <div className="space-y-3 flex-1 overflow-y-auto pr-1 custom-scrollbar">
                             {flaggedClaims.slice(0, 5).map(claim => (
-                                <div key={claim.id} className="group flex items-start p-4 rounded-xl border border-slate-100 hover:border-blue-100 hover:bg-slate-50 transition-all cursor-pointer">
+                                <div key={claim.id} className="group flex items-start p-4 rounded-xl border border-slate-100 hover:border-violet-100 hover:bg-violet-50/30 transition-all cursor-pointer">
                                     <div className="mr-4 text-xl bg-rose-50 w-10 h-10 rounded-full flex items-center justify-center border border-rose-100 text-rose-600 group-hover:scale-110 transition-transform">⚠️</div>
                                     <div className="flex-1 min-w-0">
                                         <div className="flex justify-between items-start">
@@ -104,7 +104,7 @@ export default async function Dashboard() {
                                             <span className="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-500 font-medium">#{claim.id.split('-')[1]}</span>
                                         </div>
                                         <p className="text-xs text-slate-500 mt-1">High Risk Score: <span className="font-semibold text-rose-600">{claim.riskScore}</span></p>
-                                        <Link href={`/claims`} className="text-xs text-blue-600 font-bold hover:text-blue-700 mt-2 inline-flex items-center group-hover:translate-x-1 transition-transform">
+                                        <Link href={`/claims`} className="text-xs text-violet-600 font-bold hover:text-violet-700 mt-2 inline-flex items-center group-hover:translate-x-1 transition-transform">
                                             Investigate →
                                         </Link>
                                     </div>

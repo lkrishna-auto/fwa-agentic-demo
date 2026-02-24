@@ -46,8 +46,9 @@
     "serviceDate": "2026-01-14",
     "procedureCode": "99213",
     "amount": 109,
-    "status": "Pending",
-    "riskScore": 28
+    "status": "Approved",
+    "riskScore": 28,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024004",
@@ -70,8 +71,9 @@
     "serviceDate": "2026-01-19",
     "procedureCode": "99214",
     "amount": 160,
-    "status": "Pending",
-    "riskScore": 35
+    "status": "Approved",
+    "riskScore": 35,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024006",
@@ -131,8 +133,9 @@
     "serviceDate": "2026-02-02",
     "procedureCode": "71045",
     "amount": 92,
-    "status": "Pending",
-    "riskScore": 22
+    "status": "Approved",
+    "riskScore": 22,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024011",
@@ -143,8 +146,9 @@
     "serviceDate": "2026-01-13",
     "procedureCode": "71045",
     "amount": 112,
-    "status": "Pending",
-    "riskScore": 6
+    "status": "Approved",
+    "riskScore": 6,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024012",
@@ -168,8 +172,9 @@
     "serviceDate": "2026-01-24",
     "procedureCode": "99213",
     "amount": 125,
-    "status": "Pending",
-    "riskScore": 21
+    "status": "Approved",
+    "riskScore": 21,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024014",
@@ -180,8 +185,9 @@
     "serviceDate": "2026-02-01",
     "procedureCode": "85025",
     "amount": 65,
-    "status": "Pending",
-    "riskScore": 9
+    "status": "Approved",
+    "riskScore": 9,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024015",
@@ -229,8 +235,9 @@
     "serviceDate": "2026-01-18",
     "procedureCode": "85025",
     "amount": 85,
-    "status": "Pending",
-    "riskScore": 4
+    "status": "Approved",
+    "riskScore": 4,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024019",
@@ -254,8 +261,9 @@
     "serviceDate": "2026-01-15",
     "procedureCode": "85025",
     "amount": 54,
-    "status": "Pending",
-    "riskScore": 14
+    "status": "Approved",
+    "riskScore": 14,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024021",
@@ -291,7 +299,7 @@
     "serviceDate": "2026-01-23",
     "procedureCode": "99214",
     "amount": 172,
-    "status": "Pending",
+    "status": "Flagged",
     "riskScore": 78,
     "aiReasoning": "Provider outlier: High frequency of high-cost procedures."
   },
@@ -328,8 +336,9 @@
     "serviceDate": "2026-01-14",
     "procedureCode": "99213",
     "amount": 131,
-    "status": "Pending",
-    "riskScore": 11
+    "status": "Approved",
+    "riskScore": 11,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024027",
@@ -352,8 +361,9 @@
     "serviceDate": "2026-01-16",
     "procedureCode": "99213",
     "amount": 120,
-    "status": "Pending",
-    "riskScore": 4
+    "status": "Approved",
+    "riskScore": 4,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024029",
@@ -364,7 +374,7 @@
     "serviceDate": "2026-01-20",
     "procedureCode": "99213",
     "amount": 147,
-    "status": "Pending",
+    "status": "Flagged",
     "riskScore": 97,
     "aiReasoning": "Duplicate claim: Similar service billed within 24 hours."
   },
@@ -462,8 +472,9 @@
     "serviceDate": "2026-01-22",
     "procedureCode": "71045",
     "amount": 90,
-    "status": "Pending",
-    "riskScore": 29
+    "status": "Approved",
+    "riskScore": 29,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024038",
@@ -474,8 +485,9 @@
     "serviceDate": "2026-01-17",
     "procedureCode": "99213",
     "amount": 110,
-    "status": "Pending",
-    "riskScore": 32
+    "status": "Approved",
+    "riskScore": 32,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024039",
@@ -498,8 +510,9 @@
     "serviceDate": "2026-01-09",
     "procedureCode": "71045",
     "amount": 87,
-    "status": "Pending",
-    "riskScore": 23
+    "status": "Approved",
+    "riskScore": 23,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024041",
@@ -510,8 +523,9 @@
     "serviceDate": "2026-01-23",
     "procedureCode": "99214",
     "amount": 162,
-    "status": "Pending",
-    "riskScore": 22
+    "status": "Approved",
+    "riskScore": 22,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024042",
@@ -522,8 +536,9 @@
     "serviceDate": "2026-01-21",
     "procedureCode": "99213",
     "amount": 105,
-    "status": "Pending",
-    "riskScore": 36
+    "status": "Approved",
+    "riskScore": 36,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024043",
@@ -558,7 +573,7 @@
     "serviceDate": "2026-01-10",
     "procedureCode": "99213",
     "amount": 122,
-    "status": "Pending",
+    "status": "Flagged",
     "riskScore": 97,
     "aiReasoning": "Duplicate claim: Similar service billed within 24 hours."
   },
@@ -571,8 +586,9 @@
     "serviceDate": "2026-01-23",
     "procedureCode": "99213",
     "amount": 149,
-    "status": "Pending",
-    "riskScore": 39
+    "status": "Approved",
+    "riskScore": 39,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
   },
   {
     "id": "CLM-2024047",
@@ -607,8 +623,577 @@
     "serviceDate": "2026-01-18",
     "procedureCode": "99214",
     "amount": 151,
-    "status": "Pending",
+    "status": "Flagged",
     "riskScore": 94,
     "aiReasoning": "Potential upcoding detected: Service duration mismatch with code."
+  },
+  {
+    "id": "CLM-2024050",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-01-03",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 88,
+    "aiReasoning": "Flagged: Amount exceeds peer benchmark by 2.5+ standard deviations."
+  },
+  {
+    "id": "CLM-2024051",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1001",
+    "beneficiaryName": "Patient B",
+    "serviceDate": "2026-01-05",
+    "procedureCode": "99214",
+    "amount": 250,
+    "status": "Flagged",
+    "riskScore": 79,
+    "aiReasoning": "Flagged: Round-number billing pattern detected."
+  },
+  {
+    "id": "CLM-2024052",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-01-07",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 85,
+    "aiReasoning": "Flagged: Duplicate billing — same beneficiary and procedure code within 7 days of CLM-2024050."
+  },
+  {
+    "id": "CLM-2024053",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1001",
+    "beneficiaryName": "Patient B",
+    "serviceDate": "2026-01-09",
+    "procedureCode": "99214",
+    "amount": 250,
+    "status": "Flagged",
+    "riskScore": 82,
+    "aiReasoning": "Flagged: Duplicate billing — same beneficiary and procedure code within 7 days of CLM-2024051."
+  },
+  {
+    "id": "CLM-2024054",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-01-10",
+    "procedureCode": "85025",
+    "amount": 150,
+    "status": "Flagged",
+    "riskScore": 91,
+    "aiReasoning": "Flagged: Amount exceeds peer benchmark. Round-number billing detected."
+  },
+  {
+    "id": "CLM-2024055",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1003",
+    "beneficiaryName": "Patient D",
+    "serviceDate": "2026-01-11",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 76,
+    "aiReasoning": "Flagged: Amount exceeds peer benchmark by 2.5+ standard deviations."
+  },
+  {
+    "id": "CLM-2024056",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-01-13",
+    "procedureCode": "85025",
+    "amount": 150,
+    "status": "Flagged",
+    "riskScore": 88,
+    "aiReasoning": "Flagged: Duplicate billing — same beneficiary and procedure code within 7 days of CLM-2024054."
+  },
+  {
+    "id": "CLM-2024057",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1004",
+    "beneficiaryName": "Patient E",
+    "serviceDate": "2026-01-14",
+    "procedureCode": "99215",
+    "amount": 350,
+    "status": "Flagged",
+    "riskScore": 93,
+    "aiReasoning": "Flagged: High-value code billed at inflated rate. Provider volume anomaly."
+  },
+  {
+    "id": "CLM-2024058",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1005",
+    "beneficiaryName": "Patient F",
+    "serviceDate": "2026-01-15",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 71,
+    "aiReasoning": "Flagged: Amount exceeds peer benchmark. Round-number billing detected."
+  },
+  {
+    "id": "CLM-2024059",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1006",
+    "beneficiaryName": "Patient G",
+    "serviceDate": "2026-01-16",
+    "procedureCode": "99214",
+    "amount": 300,
+    "status": "Flagged",
+    "riskScore": 95,
+    "aiReasoning": "Flagged: Amount outlier — 2.5+ SD above peer average for 99214."
+  },
+  {
+    "id": "CLM-2024060",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1007",
+    "beneficiaryName": "Patient H",
+    "serviceDate": "2026-01-17",
+    "procedureCode": "85025",
+    "amount": 150,
+    "status": "Flagged",
+    "riskScore": 74,
+    "aiReasoning": "Flagged: Lab panel billed at 2x peer benchmark. Round-number pattern."
+  },
+  {
+    "id": "CLM-2024061",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1008",
+    "beneficiaryName": "Patient I",
+    "serviceDate": "2026-01-18",
+    "procedureCode": "99213",
+    "amount": 150,
+    "status": "Flagged",
+    "riskScore": 80,
+    "aiReasoning": "Flagged: Round-number billing. Amount above peer mean."
+  },
+  {
+    "id": "CLM-2024062",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1009",
+    "beneficiaryName": "Patient J",
+    "serviceDate": "2026-01-19",
+    "procedureCode": "99215",
+    "amount": 400,
+    "status": "Flagged",
+    "riskScore": 97,
+    "aiReasoning": "Flagged: E&M code billed at highest complexity with inflated rate. Critical risk."
+  },
+  {
+    "id": "CLM-2024063",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-01-20",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 86,
+    "aiReasoning": "Flagged: Beneficiary churning — high-utilization patient. Amount outlier."
+  },
+  {
+    "id": "CLM-2024064",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1010",
+    "beneficiaryName": "Patient K",
+    "serviceDate": "2026-01-21",
+    "procedureCode": "99214",
+    "amount": 250,
+    "status": "Flagged",
+    "riskScore": 73,
+    "aiReasoning": "Flagged: Round-number billing. Amount outlier vs peer group."
+  },
+  {
+    "id": "CLM-2024065",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1011",
+    "beneficiaryName": "Patient L",
+    "serviceDate": "2026-01-22",
+    "procedureCode": "85025",
+    "amount": 150,
+    "status": "Flagged",
+    "riskScore": 78,
+    "aiReasoning": "Flagged: Lab panel billed at inflated rate. Round-number pattern."
+  },
+  {
+    "id": "CLM-2024066",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-01-24",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 89,
+    "aiReasoning": "Flagged: Duplicate billing — same beneficiary and procedure code within 7 days of CLM-2024063."
+  },
+  {
+    "id": "CLM-2024067",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1012",
+    "beneficiaryName": "Patient M",
+    "serviceDate": "2026-01-25",
+    "procedureCode": "99215",
+    "amount": 350,
+    "status": "Flagged",
+    "riskScore": 94,
+    "aiReasoning": "Flagged: High-complexity E&M at inflated rate. Critical outlier."
+  },
+  {
+    "id": "CLM-2024068",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1013",
+    "beneficiaryName": "Patient N",
+    "serviceDate": "2026-01-26",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 72,
+    "aiReasoning": "Flagged: Amount 2.5+ SD above peer benchmark. High-volume provider."
+  },
+  {
+    "id": "CLM-2024069",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1014",
+    "beneficiaryName": "Patient O",
+    "serviceDate": "2026-01-27",
+    "procedureCode": "99214",
+    "amount": 300,
+    "status": "Flagged",
+    "riskScore": 81,
+    "aiReasoning": "Flagged: Amount outlier and round-number billing pattern."
+  },
+  {
+    "id": "CLM-2024070",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1015",
+    "beneficiaryName": "Patient P",
+    "serviceDate": "2026-01-28",
+    "procedureCode": "85025",
+    "amount": 150,
+    "status": "Flagged",
+    "riskScore": 87,
+    "aiReasoning": "Flagged: Lab panel billed at inflated rate. Round-number pattern."
+  },
+  {
+    "id": "CLM-2024071",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-02-01",
+    "procedureCode": "85025",
+    "amount": 150,
+    "status": "Flagged",
+    "riskScore": 90,
+    "aiReasoning": "Flagged: Beneficiary churning — high-utilization patient across multiple providers."
+  },
+  {
+    "id": "CLM-2024072",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1016",
+    "beneficiaryName": "Patient Q",
+    "serviceDate": "2026-02-02",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 75,
+    "aiReasoning": "Flagged: Round-number billing. Amount above peer benchmark."
+  },
+  {
+    "id": "CLM-2024073",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-02-04",
+    "procedureCode": "85025",
+    "amount": 150,
+    "status": "Flagged",
+    "riskScore": 92,
+    "aiReasoning": "Flagged: Duplicate billing — same beneficiary and procedure code within 7 days of CLM-2024071."
+  },
+  {
+    "id": "CLM-2024074",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1017",
+    "beneficiaryName": "Patient R",
+    "serviceDate": "2026-02-05",
+    "procedureCode": "99215",
+    "amount": 400,
+    "status": "Flagged",
+    "riskScore": 96,
+    "aiReasoning": "Flagged: Highest-complexity E&M billed at 2x peer benchmark. Critical risk."
+  },
+  {
+    "id": "CLM-2024075",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1018",
+    "beneficiaryName": "Patient S",
+    "serviceDate": "2026-02-06",
+    "procedureCode": "99214",
+    "amount": 250,
+    "status": "Flagged",
+    "riskScore": 83,
+    "aiReasoning": "Flagged: Round-number billing. E&M code billed above peer average."
+  },
+  {
+    "id": "CLM-2024076",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-02-07",
+    "procedureCode": "99215",
+    "amount": 350,
+    "status": "Flagged",
+    "riskScore": 91,
+    "aiReasoning": "Flagged: High-utilization beneficiary. Inflated E&M billing."
+  },
+  {
+    "id": "CLM-2024077",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1019",
+    "beneficiaryName": "Patient T",
+    "serviceDate": "2026-02-10",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 77,
+    "aiReasoning": "Flagged: Round-number billing. Amount outlier for procedure code."
+  },
+  {
+    "id": "CLM-2024078",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-02-11",
+    "procedureCode": "99214",
+    "amount": 250,
+    "status": "Flagged",
+    "riskScore": 84,
+    "aiReasoning": "Flagged: Churning beneficiary billed at inflated rate."
+  },
+  {
+    "id": "CLM-2024079",
+    "providerId": "PRV-FWA-001",
+    "providerName": "QuickMed Billing Solutions",
+    "beneficiaryId": "BEN-1000",
+    "beneficiaryName": "Patient A",
+    "serviceDate": "2026-02-12",
+    "procedureCode": "99213",
+    "amount": 200,
+    "status": "Flagged",
+    "riskScore": 90,
+    "aiReasoning": "Flagged: Round-number billing. Provider volume anomaly — 30 claims in 6 weeks."
+  },
+  {
+    "id": "CLM-2024080",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-01-08",
+    "procedureCode": "99215",
+    "amount": 500,
+    "status": "Flagged",
+    "riskScore": 45,
+    "aiReasoning": "Flagged: Billed amount is 2.7x the peer benchmark for 99215."
+  },
+  {
+    "id": "CLM-2024081",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-1001",
+    "beneficiaryName": "Patient B",
+    "serviceDate": "2026-01-12",
+    "procedureCode": "99215",
+    "amount": 480,
+    "status": "Approved",
+    "riskScore": 30,
+    "aiReasoning": "AI Analysis: Under review — amount significantly exceeds peer benchmark."
+  },
+  {
+    "id": "CLM-2024082",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-01-15",
+    "procedureCode": "99215",
+    "amount": 450,
+    "status": "Flagged",
+    "riskScore": 55,
+    "aiReasoning": "Flagged: High-utilization beneficiary billed at inflated rate."
+  },
+  {
+    "id": "CLM-2024083",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-1019",
+    "beneficiaryName": "Patient T",
+    "serviceDate": "2026-01-18",
+    "procedureCode": "99214",
+    "amount": 400,
+    "status": "Approved",
+    "riskScore": 28,
+    "aiReasoning": "AI Analysis: Under review — amount significantly exceeds peer benchmark."
+  },
+  {
+    "id": "CLM-2024084",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-01-22",
+    "procedureCode": "99215",
+    "amount": 520,
+    "status": "Flagged",
+    "riskScore": 60,
+    "aiReasoning": "Flagged: Highest billed amount for 99215 in dataset. Beneficiary churning detected."
+  },
+  {
+    "id": "CLM-2024085",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-1018",
+    "beneficiaryName": "Patient S",
+    "serviceDate": "2026-01-25",
+    "procedureCode": "99214",
+    "amount": 380,
+    "status": "Approved",
+    "riskScore": 22,
+    "aiReasoning": "AI Analysis: Under review — amount significantly exceeds peer benchmark for 99214."
+  },
+  {
+    "id": "CLM-2024086",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-01-28",
+    "procedureCode": "99215",
+    "amount": 490,
+    "status": "Flagged",
+    "riskScore": 48,
+    "aiReasoning": "Flagged: Inflated 99215 billing. Provider avg $462 vs peer avg $186."
+  },
+  {
+    "id": "CLM-2024087",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-1001",
+    "beneficiaryName": "Patient B",
+    "serviceDate": "2026-02-02",
+    "procedureCode": "99215",
+    "amount": 510,
+    "status": "Approved",
+    "riskScore": 35,
+    "aiReasoning": "AI Analysis: Under review — provider amount pattern anomaly detected."
+  },
+  {
+    "id": "CLM-2024088",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-02-08",
+    "procedureCode": "99214",
+    "amount": 420,
+    "status": "Flagged",
+    "riskScore": 52,
+    "aiReasoning": "Flagged: 99214 billed at 2.4x peer average. High-utilization beneficiary."
+  },
+  {
+    "id": "CLM-2024089",
+    "providerId": "PRV-FWA-002",
+    "providerName": "Elite Medical Group",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-02-10",
+    "procedureCode": "99215",
+    "amount": 475,
+    "status": "Flagged",
+    "riskScore": 40,
+    "aiReasoning": "Flagged: Churning beneficiary across multiple providers. Amount outlier."
+  },
+  {
+    "id": "CLM-2024090",
+    "providerId": "PRV-001",
+    "providerName": "General Hospital",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-01-05",
+    "procedureCode": "99213",
+    "amount": 127,
+    "status": "Approved",
+    "riskScore": 12,
+    "aiReasoning": "AI Analysis: Claim falls within normal variance parameters."
+  },
+  {
+    "id": "CLM-2024091",
+    "providerId": "PRV-002",
+    "providerName": "City Clinic",
+    "beneficiaryId": "BEN-CHR-001",
+    "beneficiaryName": "Patient Alpha",
+    "serviceDate": "2026-01-15",
+    "procedureCode": "99214",
+    "amount": 168,
+    "status": "Approved",
+    "riskScore": 18
+  },
+  {
+    "id": "CLM-2024092",
+    "providerId": "PRV-003",
+    "providerName": "Dr. Smith & Associates",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-01-20",
+    "procedureCode": "99213",
+    "amount": 115,
+    "status": "Approved",
+    "riskScore": 10
+  },
+  {
+    "id": "CLM-2024093",
+    "providerId": "PRV-004",
+    "providerName": "Wellness Center",
+    "beneficiaryId": "BEN-CHR-002",
+    "beneficiaryName": "Patient Beta",
+    "serviceDate": "2026-02-05",
+    "procedureCode": "85025",
+    "amount": 88,
+    "status": "Approved",
+    "riskScore": 8
   }
 ]
